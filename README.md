@@ -12,7 +12,7 @@ The goal is not to collect summaries. The goal is to be able to draw the system,
 ## Recommended Codex setup
 
 - Open this repository as one Codex project.
-- Use **GPT-5.6 Sol** and select **Max** in the model picker for lecture synthesis, difficult lab design, and final quality review.
+- The repository config selects **GPT-5.6 Sol**. After trusting the project, select **Max** in the model picker for lecture synthesis, difficult lab design, and final quality review.
 - Use one new chat per lecture. Keep corrections and note refinement in that lecture's chat.
 - Start a separate chat for a lab only when the lab becomes a substantial project.
 
@@ -35,6 +35,7 @@ Read [`docs/LEARNING_WORKFLOW.md`](docs/LEARNING_WORKFLOW.md) for the complete c
 ```text
 .
 ├── AGENTS.md                         # permanent project instructions for Codex
+├── .codex/config.toml                # project-local Sol model default
 ├── courses/
 │   ├── AGENTS.md                     # lecture-specific Codex rules
 │   ├── beginner/                     # 36-lecture beginner track
