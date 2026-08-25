@@ -1,34 +1,27 @@
-# Private lecture inputs
+# Private files for each video
 
-Store local source material under `inputs/private/`. Everything below that directory is ignored by Git and must remain private.
+Everything under `inputs/private/` stays local and is ignored by Git.
 
-Recommended layout for one lecture:
+Create one folder per video. The folder name only needs to be clear to you:
 
 ```text
-inputs/private/beginner/05-relational-databases/
-├── transcript.md
-├── my-questions.md
-├── assigned-homework.md
-├── video.mp4                 # optional; local only
-└── screenshots/
-    ├── 00-12-40-btree-shape.png
-    └── 00-31-05-transaction-flow.png
+inputs/private/relational-databases/
+├── video.mp4
+├── transcript.srt          # .md, .txt, and .vtt are also fine
+├── slides.pdf              # preferred when the lecture has slides
+├── screenshots/            # use when no PDF exists or a video-only visual matters
+│   └── transaction-timeline.png
+└── my-questions.md         # optional
 ```
 
-## Best input package
+## What to provide
 
-Provide Codex with:
+- **Transcript:** the most important input because Codex can search the whole lecture. Timestamps are helpful but not mandatory.
+- **Slides PDF:** best for diagrams, tables, equations, and exact terminology.
+- **Screenshots:** add only if there is no PDF or something important appears only in the video.
+- **Video:** useful for checking unclear transcript passages, animations, and demonstrations.
+- **Your questions:** optional; write anything that confused or surprised you.
 
-1. A timestamped transcript in Markdown, plain text, SRT, or VTT format.
-2. Your own questions and points that did not make sense.
-3. The instructor's homework copied in your own short wording, with timestamps when possible.
-4. Screenshots only for diagrams, equations, tables, or states that the transcript cannot express.
-5. The lecture title, track, and number.
+The transcript does not need perfect grammar. Keep uncertain words as `[unclear]` instead of guessing.
 
-The transcript does not need perfect grammar. Preserve timestamps, mark uncertain words as `[unclear]`, and avoid silently guessing technical names.
-
-## Transcript versus full video
-
-A transcript plus selected screenshots is normally better than asking Codex to inspect a large video directly: it is faster to search, easier to cite by timestamp, and easier for you to correct. Keep the local video available for checking ambiguous passages. If no transcript exists, ask Codex to design a local ingestion step that extracts audio, creates a timestamped transcript, and samples keyframes into this private directory. Review that transcript before note generation.
-
-Do not put the shared Drive folder URL, file IDs, copied course PDF, or raw lecture material into public Markdown files.
+Do not place these raw files anywhere outside `inputs/private/`, and do not copy Drive URLs or file IDs into public notes.

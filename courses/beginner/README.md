@@ -1,14 +1,13 @@
 # System Design for Beginners
 
-Process lectures in order unless a prerequisite map explicitly justifies a change. Create a lecture folder from `templates/lecture/` only when that lecture begins.
+Choose any video in any order. This table helps Codex identify the correct output folder; it is not a required sequence. Codex creates a lecture folder only when that video is processed.
 
 ## Status legend
 
 - `⬜ Not started`
-- `🟨 Source ready`
-- `🟦 Notes reviewed`
-- `🟪 Lab completed`
-- `✅ Mastered`
+- `📝 Notes ready`
+- `🔁 Reviewing`
+- `✅ Comfortable`
 
 | # | Lecture | Folder | Status | Next review |
 |---:|---|---|---|---|

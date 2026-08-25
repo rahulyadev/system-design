@@ -1,14 +1,13 @@
 # System Design Masterclass
 
-Begin this track after the beginner mastery gate. Advanced lectures are longer and should normally be processed in sections before producing one coherent final set of artifacts.
+Choose any video in any order. The beginner track is a useful foundation, but this table does not enforce a sequence. Advanced videos are longer, so Codex may inspect their sources in chunks before producing one coherent `notes.md`.
 
 ## Status legend
 
 - `⬜ Not started`
-- `🟨 Source ready`
-- `🟦 Notes reviewed`
-- `🟪 Lab completed`
-- `✅ Mastered`
+- `📝 Notes ready`
+- `🔁 Reviewing`
+- `✅ Comfortable`
 
 | # | Lecture | Folder | Status | Next review |
 |---:|---|---|---|---|
@@ -29,6 +28,6 @@ Begin this track after the beginner mastery gate. Advanced lectures are longer a
 | 15 | Algorithmic System Design — I | `15-algorithmic-system-design-i` | ⬜ Not started | — |
 | 16 | Algorithmic System Design — II | `16-algorithmic-system-design-ii` | ⬜ Not started | — |
 
-## Long-lecture rule
+## Long-video note
 
-For a long masterclass lecture, create a private coverage map in chunks such as `00:00–30:00`, `30:00–60:00`, and so on. Synthesize only after all chunks are covered. Do not publish fragmented transcript summaries as final notes.
+Codex may inspect a long transcript in chunks such as `00:00–30:00`, `30:00–60:00`, and so on. You do not need to manage those chunks. The final result remains one coherent `notes.md` and one compact `review.md`.

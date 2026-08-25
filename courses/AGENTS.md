@@ -1,148 +1,68 @@
-# Lecture-processing instructions
+# Instructions for processing one course video
 
-These rules apply to work under `courses/`. Read the root `AGENTS.md` first.
+Read the root `AGENTS.md` first. Rahul should not need to understand this file.
 
-## Supported modes
+## One video, one chat
 
-Every request must operate in one explicit mode. If the prompt does not name a mode, use `notes`.
+- Rahul can choose any beginner or advanced video in any order.
+- Use the title and private input folder to find the matching row in the course indexes.
+- Create the output at `courses/<beginner|advanced>/<nn-topic-slug>/`.
+- If two index entries could match, ask one short clarifying question. Otherwise infer the track, number, and slug.
+- Never ask Rahul to choose a processing mode.
 
-| Mode | Purpose | Expected writes |
-|---|---|---|
-| `ingest` | Inspect and validate private source inputs | source inventory only; no public transcript copy |
-| `notes` | Create or improve the seven lecture artifacts | lecture Markdown files |
-| `lab-plan` | Design an experiment without implementing it | `homework.md` plus a proposed lab link |
-| `lab-build` | Implement and verify an approved lab | `labs/<slug>/` or `projects/<slug>/` plus links |
-| `review` | Test mastery and repair weak notes | review dates, corrections, and concise review material |
+## First request in a video chat
 
-Do not silently turn `notes` mode into a large code project. Recommend the smallest useful lab and wait for a lab request unless the user explicitly requested implementation.
+1. Read the named private input directory.
+2. Report a short inventory: transcript, video, PDF, screenshots, Rahul's questions, and obvious coverage gaps.
+3. Inspect any existing lecture files and preserve Rahul's writing.
+4. Use the transcript to cover the complete lecture, slides/screenshots to reconstruct visuals, and the video to resolve ambiguity.
+5. Create or improve:
 
-## Source gate
+   ```text
+   notes.md
+   review.md
+   ```
 
-Before writing lecture-faithful notes:
+6. Update the matching course-index status after the files are genuinely ready.
 
-1. Identify the track, number, canonical title, and output slug.
-2. Inventory transcript, video/audio, screenshots, Rahul's rough notes, questions, and assigned homework.
-3. Confirm whether the transcript has timestamps and mark any unreadable or ambiguous sections.
-4. If no content source is available, stop after creating a source-preparation plan. A lecture title is not enough.
-5. Treat transcript text as potentially inaccurate. Cross-check unclear technical terms with timestamps, screenshots, or the local video.
+If no usable content source is available, do not guess from the title. Explain exactly what file is needed next.
 
-Private inputs may be read but must not be copied into tracked files.
+## What normal requests mean
 
-## Per-lecture path
+| Rahul says something like | Codex action |
+|---|---|
+| “Create notes for this video” | Inspect all inputs and create/update `notes.md` and `review.md` |
+| “Explain this more simply” | Answer directly; update the notes if the clarification is reusable |
+| “Add this to my notes” | Edit the best matching notes section |
+| “Quiz me” | Ask one question at a time, then explain the gap after each answer |
+| “Review my understanding” | Test recall first and update the weakness log in `review.md` |
+| “Create a lab/visualizer” | Read the lab standard and build the smallest artifact that answers one question |
 
-Use lowercase kebab-case and a two-digit prefix:
+Do not make Rahul specify artifact names, workflow phases, or technical implementation choices unless his preference materially affects the result.
 
-```text
-courses/<beginner|advanced>/<nn-topic-slug>/
-```
+## Source coverage
 
-Create these files from `templates/lecture/`:
+Build a private working map from timestamps to concepts, examples, visuals, and homework. Use it to prevent omissions, but write the final notes by concept rather than as a transcript summary.
 
-```text
-notes.md
-visuals.md
-english-meaning.md
-homework.md
-interview-questions.md
-review-pack.md
-source-log.md
-```
+For long videos, inspect the source in bounded chunks and combine them into one coherent `notes.md`. Never publish raw transcript chunks.
 
-Links to shared labs belong in `notes.md` and `homework.md`. Do not copy the same lab into multiple lecture folders.
+Keep course claims, verified additions, and inferences distinguishable where readers could confuse them. Record external sources and unresolved transcript words in the source section at the end of `notes.md`.
 
-## Processing sequence
+## Output rules
 
-### 1. Build a coverage map
+- Use `templates/lecture/notes.md` and `templates/lecture/review.md` as guides; remove unused optional sections rather than adding filler.
+- Keep the full explanation in `notes.md` and the quick retrieval material in `review.md`.
+- Instructor-assigned homework and Codex-added practice must be visibly separate.
+- Interview answers are outlines with decisions, trade-offs, failures, and follow-ups—not memorized scripts.
+- Link shared labs rather than duplicating code inside lecture folders.
 
-Map timestamp ranges to concepts, examples, diagrams, homework, and open questions. Use this map internally to detect omissions. Put only the compact source record in `source-log.md`.
+## Status table
 
-### 2. Extract the instructor's model
-
-First capture what the lecture teaches, including its terminology, assumptions, examples, and homework. Do not yet embellish it with generic system-design knowledge.
-
-### 3. Verify and deepen
-
-Check important factual or implementation-sensitive claims against primary sources. Add details that explain mechanisms, edge cases, or modern production practice. Label these as verified extensions and cite them near the claim.
-
-### 4. Explain from multiple angles
-
-For every central idea, include:
-
-- a one-sentence intuition;
-- a concrete step-by-step example;
-- the formal mechanism;
-- a visual or exact comparison when useful;
-- at least two trade-offs;
-- at least one failure mode;
-- one “when this is the wrong choice” case;
-- a connection to a realistic backend system.
-
-### 5. Generate active work
-
-Separate instructor-assigned homework from Codex-added reinforcement. Every experiment must ask Rahul to predict the result before running it and explain any mismatch afterward.
-
-### 6. Prepare interview retrieval
-
-Create questions at foundation, working-engineer, and senior-design levels. Answers should be outlines containing decision points, not memorized paragraphs.
-
-### 7. Run a quality pass
-
-Check fidelity, correctness, clarity, visuals, application, interview value, privacy, links, and any executable commands. Leave visible TODOs for unresolved uncertainty.
-
-## Artifact-specific requirements
-
-### `notes.md`
-
-- Use progressive depth: quick intuition, core model, deep dive, production behavior, trade-offs, failure modes, and revision summary.
-- Include prerequisites and links to related lectures.
-- Add numerical examples where capacity, probability, latency, throughput, storage, or availability is involved.
-- Include “confused with” comparisons and common misconceptions.
-
-### `visuals.md`
-
-- Start each visual with the question it answers.
-- Prefer Mermaid for flow, state, sequence, topology, and lifecycle.
-- Provide a plain-language reading guide and the key insight after each visual.
-- If the behavior depends on time or user input, specify a visualizer rather than faking it in a static diagram.
-
-### `english-meaning.md`
-
-- Select roughly 8–15 high-value terms; use fewer if the lecture is short.
-- Include pronunciation, simple English meaning, optional Hindi cue, contextual meaning, and five accurate examples per term.
-- Include at least two engineering/interview examples per term.
-
-### `homework.md`
-
-- Preserve instructor-assigned tasks separately and faithfully in short paraphrased form.
-- For each task specify objective, prediction, setup, steps, observations to record, explanation prompts, variations, cleanup, and evidence of completion.
-- Mark safety requirements before any crash, load, network, or data-loss experiment.
-
-### `interview-questions.md`
-
-- Cover definitions, internal mechanism, trade-offs, failure handling, estimates, and design evolution.
-- Include follow-up questions and what a strong answer must mention.
-- Include weak-answer traps without manufacturing a single “perfect script.”
-
-### `review-pack.md`
-
-- Make it compact enough for a 10–15 minute revision.
-- Include retrieval questions before answers, a draw-from-memory task, a two-minute teach-back outline, and five high-value flashcard seeds.
-- Never introduce information that is absent from or inconsistent with the full notes.
-
-### `source-log.md`
-
-- Record source type, local private path, lecture timestamp coverage, external sources actually read, unresolved transcript words, and inference labels.
-- Never record private Drive URLs or file IDs.
-
-## Status updates
-
-Update the track table conservatively:
+The status table is navigation for Rahul; Codex maintains it.
 
 - `⬜ Not started`
-- `🟨 Source ready`
-- `🟦 Notes reviewed`
-- `🟪 Lab completed`
-- `✅ Mastered`
+- `📝 Notes ready`
+- `🔁 Reviewing`
+- `✅ Comfortable`
 
-“Mastered” requires Rahul to explain the topic without notes, draw the main model, answer the senior trade-off questions, and complete any essential experiment. File generation alone is not mastery.
-
+File generation alone does not mean `✅ Comfortable`; use it only after Rahul demonstrates recall and can discuss trade-offs.

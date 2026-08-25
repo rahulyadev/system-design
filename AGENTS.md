@@ -2,117 +2,103 @@
 
 ## Mission
 
-Help Rahul build deep, durable system-design understanding for senior backend interviews. Optimize for comprehension and retrieval, not document volume. Rahul learns best through simple language, exact visual models, mathematical reasoning when useful, and working experiments.
+Help Rahul develop deep, durable system-design understanding for backend interviews. Use simple words first, exact visuals, mathematical reasoning when helpful, and working experiments when behavior cannot be understood from prose alone.
 
-## Instruction map
+## Keep Rahul's workflow simple
 
-- Read this file for every task.
-- Before creating or editing lecture artifacts, also read `courses/AGENTS.md` and `docs/LECTURE_PLAYBOOK.md` completely.
-- Before creating a lab or visualizer, also read `docs/LAB_AND_VISUALIZATION_STANDARD.md` completely.
-- Use the matching file in `templates/lecture/` rather than inventing a new lecture format.
-- User instructions for the current task override repository defaults.
+- One video equals one Codex chat and one lecture folder.
+- Rahul may study videos in any order.
+- Rahul speaks naturally. Never require him to choose or name a workflow mode.
+- Infer whether he wants notes, an explanation, a quiz, a review, or a lab from his request.
+- Ask only when a missing choice or source would materially change the result.
 
-## Working principles
+## Instructions to read
 
-1. Work on one named lecture or one named lab at a time unless Rahul explicitly asks for a cross-lecture synthesis.
-2. Begin by inventorying the available inputs. State what is present, missing, or unreadable.
-3. For lecture-faithful notes, require a transcript, Rahul's notes, or accessible video/audio. Never reconstruct a lecture from its title alone.
-4. Distinguish clearly among:
-   - **Course:** a claim or model taught in the supplied lecture.
-   - **Verified extension:** supporting detail checked against an authoritative primary source.
-   - **Inference:** a reasoned connection not explicitly present in either source.
-5. Prefer official documentation, specifications, standards, and original papers for verification. Use secondary sources only when a primary source is unavailable or too narrow, and label that choice.
-6. Never silently “correct” the course. Preserve what it taught, then add a clearly labeled correction or nuance with evidence.
-7. Ask only questions that materially change the output. Otherwise make a visible, reversible assumption and continue.
+- For lecture work, read `courses/AGENTS.md` and `docs/LECTURE_PLAYBOOK.md` completely.
+- For a lab or executable visualizer, also read `docs/LAB_AND_VISUALIZATION_STANDARD.md` completely.
+- Use `templates/lecture/notes.md` and `templates/lecture/review.md`.
+- The current user request overrides repository defaults.
+
+## Source handling
+
+1. Inspect the named private input folder before writing.
+2. Prefer the transcript for coverage, the PDF/screenshots for visuals, and the video for unclear passages or behavior that the transcript loses.
+3. Do not recreate a lecture from its title. If no transcript, notes, or accessible audio/video content exists, state the smallest missing input.
+4. Treat transcripts as fallible. Check unclear technical words against the slide or video when possible.
+5. Preserve the lecture's explanation, then add depth. Never silently replace or “correct” what the course taught.
+6. When the boundary matters, label information as:
+   - **Course:** taught in the supplied lecture.
+   - **Verified extension:** checked against an authoritative primary source.
+   - **Inference:** a reasoned connection.
+7. Prefer official documentation, specifications, standards, and original papers for external verification. Cite only material actually read.
+
+## Default output for one video
+
+Create only two required files:
+
+```text
+courses/<beginner|advanced>/<nn-topic>/
+├── notes.md
+└── review.md
+```
+
+`notes.md` contains the complete learning material: simple explanation, deep mechanism, diagrams, examples, calculations, trade-offs, failures, misconceptions, useful English/technical vocabulary, instructor homework, extra practice, interview questions, source boundaries, and open uncertainties.
+
+`review.md` is intentionally short: closed-book questions, drawing task, answer cues, teach-back outline, flashcards, and a weakness log.
+
+Do not split these into extra files unless Rahul asks. Do not create code during ordinary note creation. Mention one high-value lab idea only when it would materially improve understanding.
 
 ## Explanation standard
 
-- Use simple words first, then introduce the formal term.
-- Expand every abbreviation on first use.
-- Explain each major concept through: problem, intuition, mechanism, example, trade-offs, failure modes, and when not to use it.
-- Connect cause and effect explicitly. Do not write isolated fact lists.
-- Use small numerical examples and equations when they improve understanding; define every symbol and unit.
-- State assumptions before calculations and sanity-check the result.
-- Contrast easily confused ideas in a table.
-- Give at least one concrete backend example and one production failure scenario for important concepts.
-- Include common misconceptions and the observable evidence that disproves each one.
-- Use original wording. Do not mimic or reproduce the instructor's material at length.
+- Introduce the plain-language idea before the formal term.
+- Expand abbreviations on first use.
+- For each important concept explain: the problem, intuition, mechanism, example, trade-offs, failure modes, observability, and when not to use it.
+- Connect cause and effect; avoid isolated fact lists.
+- Use small numerical examples and equations when useful. Define symbols, assumptions, and units, then sanity-check the result.
+- Use a table for exact comparisons and Mermaid for topology, order, state, or ownership.
+- After every non-trivial visual, add a short “how to read it” explanation and key insight.
+- Include a realistic backend example and a production failure scenario where relevant.
+- Include common misconceptions and the evidence that disproves them.
+- Use original wording; do not reproduce the instructor's material at length.
 
-## Visual standard
+## Follow-up questions in the same chat
 
-- Use Mermaid when topology, order, state, or ownership is the point.
-- Use a Markdown table for exact comparisons and mappings.
-- Add a short “how to read this” explanation after every non-trivial visual.
-- Keep diagrams small enough to understand at a glance; split overloaded diagrams.
-- Never use decorative diagrams. Every visual must answer a named question.
-- If a static diagram cannot expose the behavior, propose a deterministic executable visualizer or lab.
+- Answer the question directly in simple words, then deepen it as needed.
+- If the answer creates durable understanding or repairs an error, update `notes.md` unless Rahul says not to edit files.
+- If asked to quiz, ask one question at a time and wait for Rahul's answer before revealing the explanation.
+- If asked to review, test recall before summarizing and record genuine weak areas in `review.md`.
+- If asked for a lab, build the smallest safe artifact that exposes the behavior, verify it, and link it from the notes.
 
-## Lecture deliverables
+## Lab standard
 
-A completed lecture normally contains:
-
-- `notes.md`
-- `visuals.md`
-- `english-meaning.md`
-- `homework.md`
-- `interview-questions.md`
-- `review-pack.md`
-- `source-log.md`
-
-Do not create all files mechanically when an item has no value. Record an explicit `Not applicable` with a reason instead of filler.
-
-## Lab and code standard
-
-- A lab must test a question, not merely demonstrate happy-path code.
-- Use the **predict → run → observe → explain → vary** loop.
-- Prefer Python for services and scripts because it matches Rahul's backend experience. Use PostgreSQL, Redis, Kafka-compatible tooling, or other infrastructure only when the concept requires it.
-- Use Docker Compose for disposable infrastructure where practical. Never experiment against a host or production database by default.
-- Provide setup, verification, expected output, cleanup, and troubleshooting commands.
-- Make failure injection explicit, reversible, and confined to disposable resources.
-- Add automated tests for deterministic behavior and a repeatable manual experiment for concurrency, timing, or crash behavior.
-- Do not add a framework, dependency, dashboard, or UI unless it helps answer the learning question.
-
-## Interview standard
-
-- Progress from definition to mechanism, trade-offs, sizing, failure handling, and follow-up design changes.
-- Provide answer outlines and reasoning checkpoints, not scripts to memorize.
-- Include traps, weak answers, and likely interviewer follow-ups.
-- Where relevant, connect the concept to Rahul's Python/FastAPI, PostgreSQL, caching, queue, AWS, and migration experience without inventing work history or exposing confidential client details.
+- A lab tests one learning question through **predict → run → observe → explain → vary**.
+- Prefer Python and disposable Docker Compose infrastructure when the concept requires a real service.
+- Never target a host, production system, or existing database for crash, load, or data-loss experiments.
+- Include setup, health check, expected evidence, cleanup, troubleshooting, and relevant tests.
+- Make failure injection explicit, scoped, and reversible.
+- Do not add a UI or framework unless it makes the behavior easier to see.
 
 ## English-learning standard
 
-Select only useful hard technical terms or strong professional English words from the lecture. For each term include pronunciation, simple English meaning, optional Hindi meaning when useful, meaning in this lecture, and five natural examples. At least two examples should sound like an interview or engineering discussion. Avoid elementary filler words.
+Select only useful difficult technical or professional words. For each selected word include pronunciation, simple English meaning, optional short Hindi cue, meaning in the lecture, and five natural examples. At least two examples should fit an interview or engineering discussion. Keep this inside `notes.md`.
 
-## Source, privacy, and copyright rules
+## Interview standard
+
+Move from definition to mechanism, trade-offs, sizing, failure handling, and design changes. Give answer outlines and reasoning checkpoints, not scripts to memorize. Include weak-answer traps and likely follow-ups. Connect to Python, FastAPI, PostgreSQL, caching, queues, AWS, and migrations only when relevant; never invent Rahul's experience.
+
+## Privacy and copyright
 
 This is a public repository.
 
-- Never commit videos, audio, course PDFs, full transcripts, raw screenshots, private Drive URLs or file IDs, tokens, secrets, personal data, or proprietary employer material.
-- Treat `inputs/private/` as read-only source material and keep it untracked.
-- Quote only short fragments when necessary for accuracy, attribute them in `source-log.md`, and otherwise paraphrase in original language.
-- Do not cite a source that was not actually read.
-- Record timestamp ranges for lecture-derived material whenever the input supplies timestamps.
+- Treat `inputs/private/` as read-only and untracked.
+- Never commit video/audio, transcripts, PDFs, screenshots, private Drive URLs or IDs, tokens, personal data, or employer-confidential material.
+- Paraphrase source material in original wording. Quote only short fragments when accuracy requires it.
+- Record useful timestamp ranges and uncertainties without copying raw source text.
 
-## Git workflow
+## Git safety and completion
 
-- Prefer one branch per lecture or substantial lab: `lecture/<track>-<nn>-<slug>` or `lab/<slug>`.
-- Keep generated changes scoped to the requested lecture or lab.
-- Review the diff and run relevant checks before declaring completion.
-- Do not push, merge, delete branches, or overwrite user changes unless the current request authorizes it.
-- Update the track progress table only after the corresponding state is genuinely reached.
-
-## Definition of done
-
-Before calling lecture work complete, verify that:
-
-- the notes are faithful to the supplied source and important additions are cited;
-- simple explanations and formal terminology agree;
-- diagrams render and are explained;
-- calculations include assumptions and units;
-- homework distinguishes instructor-assigned work from Codex-added practice;
-- interview answers include trade-offs and failure modes;
-- glossary examples are natural and accurate;
-- no private or copyrighted raw material is staged;
-- any code runs from the documented clean setup and has a safe cleanup path;
-- open uncertainties are visible rather than hidden.
-
+- Preserve Rahul's existing writing and unrelated changes.
+- Keep changes scoped to the named lecture or lab.
+- Do not push, merge, delete branches, or overwrite user changes unless authorized.
+- Update the course index only when the state truly changed.
+- Before handoff, check source fidelity, technical correctness, diagrams, links, privacy, and executable commands. Keep uncertainties visible.

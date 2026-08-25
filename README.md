@@ -1,81 +1,83 @@
 # System Design Learning Lab
 
-This repository is Rahul Yadav's long-term system-design learning system. It turns each lecture into four kinds of understanding:
+This repository helps Rahul study Arpit Bhayani's system-design course deeply, in simple language, with diagrams, interview practice, and working experiments.
 
-1. **Explain it** — detailed notes in simple language.
-2. **See it** — diagrams, timelines, tables, and small visualizers.
-3. **Break it** — safe experiments that expose failure modes.
-4. **Defend it** — interview questions, trade-offs, and concise explanations.
+## The whole workflow
 
-The goal is not to collect summaries. The goal is to be able to draw the system, predict its behavior, run it, explain why it behaved that way, and discuss alternatives in an interview.
+Use one video per Codex chat. Videos can be studied in any order.
 
-## Recommended Codex setup
+1. Create a private folder for the video, for example:
 
-- Open this repository as one Codex project.
-- The repository config selects **GPT-5.6 Sol**. After trusting the project, select **Max** in the model picker for lecture synthesis, difficult lab design, and final quality review.
-- Use one new chat per lecture. Keep corrections and note refinement in that lecture's chat.
-- Start a separate chat for a lab only when the lab becomes a substantial project.
+   ```text
+   inputs/private/relational-databases/
+   ```
 
-## Quick start for one lecture
+2. Put these files in it:
 
-1. Choose the next lecture from [`courses/beginner/README.md`](courses/beginner/README.md).
-2. Watch it once and capture your questions, the assigned homework, and only the screenshots that explain a diagram or state change.
-3. Put private inputs under `inputs/private/<track>/<lecture-slug>/`. This directory is ignored by Git.
-4. Start a new Codex chat in this repository and paste [`docs/prompts/START_LECTURE.md`](docs/prompts/START_LECTURE.md), filling in the placeholders.
-5. Review Codex's draft against the lecture. Correct misunderstandings before treating the notes as final.
-6. Write the ideas in your physical notebook from memory, then check what you missed.
-7. Complete the prediction-observation-explanation homework or lab.
-8. Use the interview questions and do a two-minute teach-back without reading.
-9. Upload the clean review material to NotebookLM and schedule spaced reviews.
+   ```text
+   video.mp4
+   transcript.srt          # .md, .txt, and .vtt also work
+   slides.pdf              # preferred when available
+   screenshots/            # use when there is no PDF or a video-only visual matters
+   my-questions.md         # optional
+   ```
 
-Read [`docs/LEARNING_WORKFLOW.md`](docs/LEARNING_WORKFLOW.md) for the complete cycle.
+3. Open a new Codex chat at the repository root and send:
 
-## Repository map
+   ```text
+   This chat is for "<video title>". Its files are in `inputs/private/<folder>`.
+   Please read them and create my notes. Explain in simple words first and then
+   in depth. Follow the repository instructions and keep the source files private.
+   ```
 
-```text
-.
-├── AGENTS.md                         # permanent project instructions for Codex
-├── .codex/config.toml                # project-local Sol model default
-├── courses/
-│   ├── AGENTS.md                     # lecture-specific Codex rules
-│   ├── beginner/                     # 36-lecture beginner track
-│   └── advanced/                     # 16-lecture masterclass track
-├── docs/
-│   ├── LEARNING_WORKFLOW.md           # Rahul's learning loop
-│   ├── LECTURE_PLAYBOOK.md            # exact Codex processing procedure
-│   ├── LAB_AND_VISUALIZATION_STANDARD.md
-│   ├── NOTEBOOKLM_HANDOFF.md
-│   └── prompts/                       # copy-paste prompts
-├── templates/lecture/                # required output templates
-├── inputs/private/                   # local source material; never committed
-├── labs/                             # focused experiments shared by topics
-└── projects/                         # larger capstones combining topics
-```
+4. Continue naturally in the same chat. You do not need to name a mode or know a special command.
 
-Lecture folders are created only when a lecture is processed. This avoids 52 empty directories and lets the structure evolve from real use.
+   ```text
+   Explain MVCC again with a small timeline.
 
-## Output for each completed lecture
+   Add this explanation to my notes.
+
+   Quiz me from this video, one question at a time.
+
+   Review my understanding and tell me what I am missing.
+
+   Create a small working lab that makes this concept visible.
+   ```
+
+That is all you need to manage. Codex reads the detailed rules and templates automatically.
+
+## What Codex creates
+
+Each processed video gets one folder:
 
 ```text
-courses/<track>/<nn-topic>/
-├── notes.md
-├── visuals.md
-├── english-meaning.md
-├── homework.md
-├── interview-questions.md
-├── review-pack.md
-└── source-log.md
+courses/<beginner|advanced>/<nn-topic>/
+├── notes.md              # complete explanation, visuals, words, practice, interview questions
+└── review.md             # short revision, recall questions, flashcards, weakness log
 ```
 
-Code should live in `labs/` or `projects/` and be linked from the relevant lecture instead of being duplicated.
+When you explicitly ask for a practical experiment, Codex creates the smallest useful lab under `labs/` or a larger capstone under `projects/`, then links it from the notes.
 
-## Tracks
+## How to use the files
 
-- **Beginner first:** concepts, common building blocks, and standard design questions.
-- **Masterclass second:** foundations at greater depth, databases, distributed systems, storage engines, throughput, retrieval, and algorithmic design.
+- Read `notes.md`, close the screen, and reconstruct the main idea in your physical notebook.
+- Use `review.md` for quick recall and NotebookLM/quiz practice.
+- Ask every follow-up question in the same video chat. Codex can improve the notes as your understanding grows.
+- Start a fresh chat only for another video or a large standalone project.
 
-Do not rush into the masterclass merely because the beginner notes exist. Move forward when you can explain the concept without notes, draw the main flow, discuss at least two trade-offs, and complete its important experiment.
+## Course indexes
+
+- [`courses/beginner/README.md`](courses/beginner/README.md)
+- [`courses/advanced/README.md`](courses/advanced/README.md)
+
+The indexes help Codex choose the correct output folder. They do not force a study order.
+
+## Codex setup
+
+Open this repository as one Codex project. The project config selects GPT-5.6 Sol. Select Max for lecture synthesis, difficult questions, and labs when available.
 
 ## Public-repository boundary
 
-This repository is public. Do not commit course videos, course PDFs, full transcripts, raw screenshots, private Drive URLs or IDs, credentials, or copied course notes. Keep source material under the ignored `inputs/private/` directory. Commit only original explanations, limited attributed excerpts when necessary, independently created diagrams, code, and experiment results.
+This repository is public. Everything under `inputs/private/` is ignored by Git. Never commit course videos, transcripts, PDFs, screenshots, Drive links or IDs, credentials, or other raw course material. Commit only original notes, diagrams, code, and your own experiment results.
+
+More detail is available in [`docs/LEARNING_WORKFLOW.md`](docs/LEARNING_WORKFLOW.md), but reading it is optional.
