@@ -1,1 +1,3 @@
-# Project-local model default. Codex loads project configuration after the\n# repository is trusted. Select Max in the app for quality-critical work.\nmodel = "gpt-5.6-sol"\n
+# Project-local model default. Codex loads project configuration after the
+# repository is trusted. Select Max in the app for quality-critical work.
+model = "gpt-5.6-sol"
