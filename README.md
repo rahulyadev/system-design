@@ -1,83 +1,81 @@
 # System Design Learning Lab
 
-This repository helps Rahul study Arpit Bhayani's system-design course deeply, in simple language, with diagrams, interview practice, and working experiments.
+This repository turns each supplied Arpit Bhayani course video into a complete, source-faithful learning pack: simple notes, deep mechanisms, reconstructable visuals, interview reasoning, useful English, instructor-assigned tasks, runnable local setup, observed evidence, and a separate reference solution.
 
-## The whole workflow
+## The important rule
 
-Use one video per Codex chat. Videos can be studied in any order.
+Study any video at any time. The 36 Beginner and 16 Advanced entries are an identification catalog, not a mandatory sequence. If a selected lecture uses an unfamiliar idea, Codex adds the smallest bridge needed inside that lecture instead of blocking you.
 
-1. Create a private folder for the video, for example:
+## One video, one chat, one pack
 
-   ```text
-   inputs/private/relational-databases/
-   ```
-
-2. Put these files in it:
-
-   ```text
-   video.mp4
-   transcript.srt          # .md, .txt, and .vtt also work
-   slides.pdf              # preferred when available
-   screenshots/            # use when there is no PDF or a video-only visual matters
-   my-questions.md         # optional
-   ```
-
-3. Open a new Codex chat at the repository root and send:
-
-   ```text
-   This chat is for "<video title>". Its files are in `inputs/private/<folder>`.
-   Please read them and create my notes. Explain in simple words first and then
-   in depth. Follow the repository instructions and keep the source files private.
-   ```
-
-4. Continue naturally in the same chat. You do not need to name a mode or know a special command.
-
-   ```text
-   Explain MVCC again with a small timeline.
-
-   Add this explanation to my notes.
-
-   Quiz me from this video, one question at a time.
-
-   Review my understanding and tell me what I am missing.
-
-   Create a small working lab that makes this concept visible.
-   ```
-
-That is all you need to manage. Codex reads the detailed rules and templates automatically.
-
-## What Codex creates
-
-Each processed video gets one folder:
+Place local sources under:
 
 ```text
-courses/<beginner|advanced>/<nn-topic>/
-├── notes.md              # complete explanation, visuals, words, practice, interview questions
-└── review.md             # short revision, recall questions, flashcards, weakness log
+inputs/private/<LECTURE-ID>/
+├── transcript.srt       # .txt, .md, and .vtt also work
+├── slides.pdf
+├── video.mp4
+├── screenshots/         # optional
+└── my-questions.md      # optional
 ```
 
-When you explicitly ask for a practical experiment, Codex creates the smallest useful lab under `labs/` or a larger capstone under `projects/`, then links it from the notes.
+Then open a dedicated Codex chat for that video and say:
 
-## How to use the files
+```text
+Process <LECTURE-ID>.
+```
 
-- Read `notes.md`, close the screen, and reconstruct the main idea in your physical notebook.
-- Use `review.md` for quick recall and NotebookLM/quiz practice.
-- Ask every follow-up question in the same video chat. Codex can improve the notes as your understanding grows.
-- Start a fresh chat only for another video or a large standalone project.
+Codex infers the track, title, folder, sources, tasks, tools, and output. See [`START_HERE.md`](START_HERE.md).
 
-## Course indexes
+## What one processed video produces
 
-- [`courses/beginner/README.md`](courses/beginner/README.md)
-- [`courses/advanced/README.md`](courses/advanced/README.md)
+```text
+courses/<track>/<LECTURE-ID>-<slug>/
+├── metadata.json
+├── source_manifest.json
+├── notes.md
+├── review.md
+├── visuals/                         # only when separate assets help
+└── tasks/
+    └── <LECTURE-ID>-T01/
+        ├── task.json
+        ├── README.md                 # exact requirements, setup, acceptance criteria
+        ├── ATTEMPT.md                # Rahul's work; never overwritten
+        ├── RUBRIC.md
+        ├── starter/                  # optional code/config
+        ├── tests/                    # optional acceptance checks
+        ├── lab/                      # when runtime behavior matters
+        │   ├── README.md
+        │   ├── compose.yaml          # only the required disposable services
+        │   ├── verify.py
+        │   └── evidence.md
+        └── reference/
+            ├── SOLUTION.md
+            └── ...                   # reference code/config when needed
+```
 
-The indexes help Codex choose the correct output folder. They do not force a study order.
+Instructor tasks and Codex-added practice are never mixed. If the source assigns a task, its learner setup and separate reference answer are required during the first processing pass. If no instructor task exists, the source manifest records how the video was checked and the notes say so explicitly.
 
-## Codex setup
+## Evidence, not invented output
 
-Open this repository as one Codex project. The project config selects GPT-5.6 Sol. Select Max for lecture synthesis, difficult questions, and labs when available.
+Every runnable task separates:
 
-## Public-repository boundary
+```text
+prediction → expected outcome → actual observation → explanation → variation
+```
 
-This repository is public. Everything under `inputs/private/` is ignored by Git. Never commit course videos, transcripts, PDFs, screenshots, Drive links or IDs, credentials, or other raw course material. Commit only original notes, diagrams, code, and your own experiment results.
+When Docker or another required tool is unavailable, execution is marked `skipped`. Expected behavior remains clearly labeled as reasoned, never observed.
 
-More detail is available in [`docs/LEARNING_WORKFLOW.md`](docs/LEARNING_WORKFLOW.md), but reading it is optional.
+## Privacy
+
+Videos, transcripts, slide PDFs, screenshots, raw quotations, Drive identifiers, secrets, and private notes stay under `inputs/private/` and are ignored by Git. Only original explanations, diagrams, exercises, code, and experiment evidence belong in the public repository.
+
+## Catalog and validation
+
+- [`COURSE_INDEX.md`](COURSE_INDEX.md) — all 52 videos and stable IDs
+- [`PROGRESS.md`](PROGRESS.md) — artifact and learning state
+- [`TASK_AND_LAB_STANDARD.md`](TASK_AND_LAB_STANDARD.md) — task, solution, and evidence contract
+- [`docs/PROMPTS.md`](docs/PROMPTS.md) — everyday prompts
+- [`scripts/validate_repo.py`](scripts/validate_repo.py) — bootstrap/live/archive validation
+
+No GitHub operation is required to use this ZIP.

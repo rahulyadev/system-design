@@ -1,0 +1,15 @@
+{
+  "id": "<LECTURE-ID>-T01",
+  "lecture_id": "<LECTURE-ID>",
+  "title": "<faithful concise title>",
+  "source_timestamp": "<timestamp or slide reference>",
+  "type": "<reasoning|calculation|query|coding|experiment|design|incident>",
+  "instructor_assigned": true,
+  "runtime_required": false,
+  "tool_profile": "reasoning-only",
+  "tools": [],
+  "learner_status": "not_started",
+  "reference_status": "ready",
+  "execution_status": "not_required",
+  "execution_reason": "No runtime required for this reasoning task"
+}

@@ -1,60 +1,76 @@
-# Quick review — <Video title>
+# Quick review — <LECTURE-ID> <Video title>
 
-> Try every question before opening `notes.md`. Keep this file compact enough for a 10–15 minute review.
+> Answer before opening `notes.md`. Keep this review usable in 10–20 minutes.
 
-## Recall without notes
+## Closed-book recall
 
-1. What problem does this concept solve?
-2. Explain the main mechanism in order.
-3. What must remain true for it to work correctly?
-4. Name two trade-offs and one situation where it is the wrong choice.
-5. Predict one concurrency, scale, or failure outcome and explain why.
-6. Which nearby concept is easiest to confuse with it?
+1. What problem does the main concept solve?
+2. Explain its mechanism in order.
+3. What invariant or assumption must hold?
+4. Draw the essential components, state, or message flow.
+5. Name two trade-offs and one wrong-use case.
+6. Predict one concurrency, scale, or failure outcome.
+7. Which nearby concept is easiest to confuse with it?
 
 ## Draw from memory
 
-Draw only:
+- Components/states: <items>
+- Arrows/order: <items>
+- Failure boundary: <item>
+- Key number/invariant: <item>
 
-- <essential components or states>
-- <essential arrows or ordering>
-- <important invariant or failure boundary>
+Then compare with [Big picture](notes.md#big-picture).
 
-Then compare with the Big picture section in [notes.md](notes.md#big-picture).
+## Instructor-task recall
+
+- Restate the task requirement without opening the task README.
+- Predict the result/evidence.
+- Explain the deciding mechanism.
+- Name one useful variation.
+
+Use “No instructor task” only when the source manifest confirms zero tasks.
 
 ## Answer cues
 
-<Short cues only; link to notes sections instead of copying full explanations.>
+<Short cues and section links only; do not duplicate full notes or reference solutions.>
 
 ## Two-minute teach-back
 
-1. Problem
+1. Problem and assumptions
 2. Simple intuition
-3. Mechanism
+3. Mechanism/invariant
 4. Example
 5. Trade-off
-6. Failure and recovery
+6. Failure/recovery
+7. Evidence
 
 ## Interview follow-ups
 
-1. <mechanism or debugging question>
-2. <trade-off question>
-3. <requirement change>
+1. <mechanism/debugging>
+2. <trade-off/alternative>
+3. <scale/consistency/failure change>
 
-## Five flashcards
+## Flashcards
 
 | Front | Back | Type |
 |---|---|---|
-| <single decision/mechanism question> | <short answer plus why> | <mechanism/trade-off/failure/estimate> |
+| <decision/mechanism question> | <short answer plus why> | <mechanism/trade-off/failure/estimate> |
+
+## English speaking check
+
+- Use `<term>` naturally in one simple sentence.
+- Explain `<term>` without using the term itself.
+- Correct this weak interview phrase: `<phrase>`.
 
 ## Weakness log
 
-Record only gaps Rahul actually demonstrates during review.
+Record only gaps Rahul demonstrates.
 
-| Date | What I missed | Gap type | Repair action | Retest |
+| Date | Exact gap | Type | Repair | Retest |
 |---|---|---|---|---|
-| <date> | <exact missing reasoning step> | <term/mechanism/decision/prediction> | <notes section or lab variation> | <date> |
+| <date> | <missing step> | <term/mechanism/decision/prediction> | <notes/task variation> | <date> |
 
 ## Next review
 
-- **Suggested date:** <YYYY-MM-DD>
-- **One thing to test:** <highest-value weak point>
+- Suggested date: <YYYY-MM-DD>
+- Highest-value thing to retest: <gap>

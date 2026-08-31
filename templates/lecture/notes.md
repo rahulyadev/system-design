@@ -1,39 +1,38 @@
-# <NN>. <Video title>
+# <LECTURE-ID> — <Video title>
 
 > **Track:** <Beginner | Advanced>  
-> **Status:** <Notes ready | Reviewing | Comfortable>  
-> **Last updated:** <YYYY-MM-DD>  
-> **Related lab/project:** <link or Not created>
+> **Artifact state:** <Draft | Ready>  
+> **Learning state:** <Not started | Learning | Practiced | Recalled | Demonstrated | Comfortable>  
+> **Last updated:** <YYYY-MM-DD>
 
-## Source check
+## Source and coverage check
 
-- **Inspected:** <transcript, slides PDF, screenshots, video sections, Rahul's questions>
-- **Coverage:** <complete or exact gaps>
-- **Unclear source points:** <items or None>
+- Inspected: <transcript, slides, video ranges, screenshots, Rahul's questions>
+- Coverage: <complete or exact gaps>
+- Unclear source points: <items or None>
+- Instructor-task scan: <complete/incomplete; count and links>
 
-Do not publish private paths, Drive links/IDs, raw transcript passages, or screenshots here.
+Do not expose private paths, URLs/IDs, raw transcript passages, or copied slide images.
 
-## What I should learn
-
-After this video, I should be able to:
+## What I should be able to do
 
 - <observable outcome>
 - <observable outcome>
 - <observable outcome>
+
+## Small bridge from earlier ideas
+
+<Explain only the minimum background needed to study this video independently. Say “No bridge needed” when appropriate. Never block the chosen lecture.>
 
 ## The 60-second story
 
-<Explain the problem, core idea, and result in very simple language. Introduce formal terms only after the plain idea.>
+<Problem → simple idea → result, in plain language. Introduce formal terms after intuition.>
 
-## Why this concept exists
+## Why the terms matter
 
-### The problem without it
-
-<Use a concrete backend scenario.>
-
-### What a good solution needs
-
-- <property and why it matters>
+| Term | Simple meaning | Why it matters here | Common confusion |
+|---|---|---|---|
+| <term> | <plain meaning> | <decision/mechanism> | <nearby term or misuse> |
 
 ## Big picture
 
@@ -42,202 +41,203 @@ After this video, I should be able to:
 <Exact question.>
 
 ```mermaid
-flowchart LR
-    A["Replace with exact component/state"] --> B["Replace with exact transition"]
+flowchart TD
+    A["Replace with an exact component or state"] --> B["Replace with an exact transition"]
 ```
 
-**How to read it:** <walk through the diagram in order.>
+### How to read this visual
 
-**Key insight:** <the idea made visible by the diagram.>
+<Walk through it in order.>
 
-Remove this diagram when a table or plain explanation is more exact. Add more small visuals only when each answers a different question.
+### Key insight
+
+<What becomes obvious.>
+
+### Simplification or limitation
+
+<What production reality is omitted.>
+
+Use additional small visuals only when each answers a different question.
 
 ## Core concepts
 
-### <Concept 1>
+### <Concept>
 
 **Simple meaning:** <plain explanation.>
 
-**Formal meaning:** <precise terminology.>
+**Formal meaning:** <precise definition and boundary.>
+
+**Why it exists:** <problem without it.>
 
 **How it works:**
 
-1. <cause and state change>
-2. <cause and state change>
+1. <cause/state change>
+2. <cause/state change>
 3. <observable result>
 
-**Why it works:** <mechanism and invariant.>
+**Invariant or deciding condition:** <what must remain true.>
 
-**Example:** <small concrete example.>
+**Small example:** <specific values/components.>
 
-**Trade-off:** <what is gained and paid.>
+**Trade-off:** <gain versus cost.>
 
-Repeat for the other central concepts; do not create filler sections for minor mentions.
+**Failure/observability:** <symptom, evidence, recovery.>
 
-## Worked example
+**When not to use it:** <condition and alternative.>
 
-### Setup and assumptions
+Repeat for central concepts; do not inflate minor mentions.
 
-- <value, unit, and reason>
+## Worked example and calculations
 
-### Walkthrough
+### Assumptions
 
-<Show intermediate states or calculation steps.>
+- <number, unit, source/reason>
+
+### Steps
+
+<Show intermediate calculations or states.>
 
 ### Result and sanity check
 
-<Explain whether the result is plausible and what it teaches.>
+<Explain why the result is or is not plausible.>
 
-## Deep dive
+## Deep mechanism
 
-### Internal mechanism and invariants
+### Components, ownership, and boundaries
 
-<Implementation-level detail needed for deep understanding and senior interviews.>
+<Who owns state and which boundary changes guarantees?>
 
-### Concurrency, ordering, and stale state
+### Ordering, concurrency, and stale state
 
-<What can race, reorder, block, duplicate, or become stale?>
+<What races, reorders, blocks, duplicates, or becomes stale?>
 
 ### Failure and recovery
 
-| Failure | What we observe | Why it happens | Protection/recovery | Remaining risk |
+| Failure | Observable symptom | Mechanism | Protection/recovery | Remaining risk |
 |---|---|---|---|---|
-| <failure> | <symptom> | <mechanism> | <response> | <risk> |
+| <failure> | <evidence> | <cause> | <action> | <risk> |
 
-### How we observe it
+### Observability
 
-<Useful logs, metrics, traces, queries, or states.>
+<Useful metrics, logs, traces, queries, states, and alerts.>
 
-## Design choices and trade-offs
+## Design choices
 
 | Choice | Benefits | Costs/risks | Prefer when | Avoid when |
 |---|---|---|---|---|
-| <choice> | <benefits> | <costs> | <condition> | <condition> |
+| <choice> | <benefit> | <cost> | <condition> | <condition> |
 
-## Common confusions and misconceptions
+## Misconceptions
 
-| Confusion or claim | What is actually true | Evidence or example |
+| Claim/confusion | What is actually true | Evidence or counterexample |
 |---|---|---|
-| <A versus B or misconception> | <deciding difference/correction> | <observable evidence> |
+| <claim> | <correction> | <trace/example> |
 
-## Real backend example
+## Real backend connection
 
-<Connect the idea to a realistic Python/FastAPI/database/cache/queue/AWS system when relevant. Do not invent personal experience.>
+<Use a realistic Python/FastAPI/PostgreSQL/cache/queue/AWS example only when relevant. Distinguish an example from Rahul's actual experience.>
 
-## When not to use it
+## Instructor-assigned tasks
 
-- <condition, why, and a better alternative>
+If tasks exist:
 
-## Homework and practice
+| Task | Faithful purpose | Tools | Reference verified? | Learner status |
+|---|---|---|---|---|
+| [`<LECTURE-ID>-T01`](tasks/<LECTURE-ID>-T01/README.md) | <purpose> | <tools/none> | <passed/skipped> | <not started> |
 
-### Instructor-assigned
+If none:
 
-- **Task:** <short faithful paraphrase or Not found in source>
-- **Source timestamp:** <time when available>
-- **What proves completion:** <evidence>
+> No instructor-assigned task found in the supplied source. The complete source and ending were scanned; see `source_manifest.json`.
 
-### Extra practice from Codex
+### Codex-added practice
 
-1. **Predict:** <write an expected result and why before running anything.>
-2. **Try:** <small safe action or thought experiment.>
-3. **Observe:** <specific evidence.>
-4. **Explain:** <connect evidence to the mechanism.>
-5. **Vary:** <change one condition and predict again.>
+Keep this visibly separate:
 
-### Optional lab idea
+1. Predict: <question>
+2. Draw: <visual reconstruction>
+3. Explain: <mechanism in your own words>
+4. Change: <one altered requirement>
 
-- **Learning question:** <one precise question or Not needed>
-- **Why a lab would help:** <behavior prose cannot reveal>
-- **Smallest useful scope:** <components/non-goals>
+## Useful English and technical phrases
 
-Do not build the lab during ordinary note creation unless Rahul asks.
+### <Term or phrase>
 
-## Useful English and technical words
+- Pronunciation: <cue>
+- Simple meaning: <meaning>
+- Hindi cue (optional): <short cue>
+- Why it matters here: <context>
+- Common misuse: <misuse>
 
-Choose only high-value difficult words. Use fewer words for a short video.
+Examples:
 
-### <Word or phrase>
+1. Simple: <sentence>
+2. Engineering: <sentence>
+3. Engineering: <different sentence>
+4. Interview: <natural sentence>
+5. Professional/design review: <natural sentence>
 
-- **Pronunciation:** <IPA or simple phonetic cue>
-- **Simple English meaning:** <plain meaning>
-- **Hindi cue (optional):** <short cue>
-- **Meaning in this video:** <precise contextual use>
-- **Common confusion:** <similar or incorrectly used word>
+## Interview practice
 
-Five examples:
+### Foundation
 
-1. **Simple:** <natural example>
-2. **Technical:** <engineering example>
-3. **Technical:** <different engineering example>
-4. **Interview:** <natural interview sentence>
-5. **Professional:** <design review or incident sentence>
+**Question:** <definition/mechanism question>
 
-## Interview questions
+**Strong answer covers:** <problem, mechanism, boundary, example>
 
-Answer aloud before reading the cues.
+**Weak-answer trap:** <plausible but shallow answer>
 
-### Foundation — <question>
+### SDE-2 working engineer
 
-**Strong answer should cover:** <problem, mechanism, boundary, example>
+**Question:** <implementation/debugging decision>
 
-**Weak-answer trap:** <plausible but incomplete answer>
+**Reasoning checkpoints:** <evidence, mechanism, decision, trade-off, test/operation>
 
-**Follow-up:** <question that tests understanding>
+**Follow-up:** <one requirement change>
 
-### Working engineer — <question>
+### SDE-3 senior design
 
-**Reasoning checkpoints:** <symptom, mechanism, evidence, decision, trade-off>
+**Prompt:** <open design/incident prompt>
 
-**Follow-up:** <debugging or implementation change>
-
-### Senior design — <question>
-
-**Clarify first:** <scale, consistency, latency, durability, availability, or cost assumptions>
+**Clarify first:** <scale, latency, consistency, durability, availability, cost>
 
 **Answer outline:** <decision, reason, alternative, failure/recovery, observability>
 
-**Requirement change:** <one changed constraint and how the design should adapt>
+**Requirement change:** <new constraint and adaptation>
 
-## My questions and clarifications
-
-### <Rahul's question>
-
-<Direct simple answer followed by the deeper explanation and example. Add future durable clarifications here.>
-
-## Course, verified additions, and uncertainty
+## Course, verified extensions, and uncertainty
 
 ### Course model
 
-<Concise faithful description of the model taught in the video.>
+<Faithful source model.>
 
-### Verified additions
+### Verified extensions
 
-- <Claim and nearby primary-source citation, or None needed>
+- <primary-source-backed addition, or None needed>
 
-### Inferences
+### Inferences and practical connections
 
-- <Clearly labeled reasoned connection, or None>
+- <clearly labeled inference, or None>
 
-### Source uncertainties
+### Unresolved source points
 
-- [ ] <timestamp and unresolved word/claim, or None>
+- [ ] <timestamp and uncertainty, or None>
 
-## Final revision summary
+## Final revision card
 
-### Five facts worth retaining
+### Five facts
 
 1. <fact>
 
-### Three decisions worth defending
+### Three decisions
 
 1. <decision and condition>
 
-### One failure to remember
+### One failure
 
-<symptom → cause → recovery>
+<symptom → cause → evidence → recovery>
 
-### Sixty-second explanation
+### Natural 60-second explanation
 
-<Natural outline in Rahul's own speaking style, not a memorized script.>
+<Speaking outline, not memorized prose.>
 
-See [review.md](review.md) for closed-book practice.
+See [review.md](review.md) for closed-book retrieval.
