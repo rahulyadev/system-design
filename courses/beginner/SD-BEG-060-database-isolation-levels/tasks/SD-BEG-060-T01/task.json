@@ -1,0 +1,28 @@
+{
+  "id": "SD-BEG-060-T01",
+  "lecture_id": "SD-BEG-060",
+  "title": "Observe isolation with one row and two sessions",
+  "source_timestamp": "00:17:02-00:17:24",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "postgres-root",
+  "tools": [
+    "docker",
+    "docker compose",
+    "postgresql",
+    "psql",
+    "python-standard-library"
+  ],
+  "runtime_version": "PostgreSQL 18.6",
+  "version_checked_at": "2026-09-01",
+  "version_sources": [
+    "https://www.postgresql.org/docs/release/18.6/",
+    "https://github.com/docker-library/postgres/blob/master/versions.json",
+    "https://www.postgresql.org/docs/18/transaction-iso.html"
+  ],
+  "learner_status": "not_started",
+  "reference_status": "verified",
+  "execution_status": "passed",
+  "execution_reason": "PostgreSQL 18.6 reference path passed Read Committed, Repeatable Read, Read Uncommitted mapping, Serializable conflict/retry, lock-wait, and scoped-cleanup assertions on 2026-09-01; learner status remains not_started"
+}

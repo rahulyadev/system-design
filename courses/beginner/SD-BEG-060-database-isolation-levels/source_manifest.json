@@ -1,0 +1,60 @@
+{
+  "lecture_id": "SD-BEG-060",
+  "track": "beginner",
+  "title": "Database Isolation Levels",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcripts": 1,
+    "transcript_timestamp_coverage": "00:00:00.640-00:18:13.160",
+    "slide_files": 1,
+    "slide_pages": 2,
+    "videos": 1,
+    "video_duration": "00:18:21.917"
+  },
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "unclear_source_points": [],
+  "resolved_source_points": [
+    "The transcript's repeated 'select start' wording was resolved from the terminal video as SELECT *.",
+    "The demonstrations use MySQL with autocommit disabled and the InnoDB behaviors described in current MySQL documentation; the concepts are portable but exact traces are not.",
+    "The serializable demonstration is a conflicting exclusive-write/shared-read lock wait on one row, not a claim that every transaction or every read blocks every other read.",
+    "The final recommendation to reproduce the one-table, one-row experiment in the learner's chosen database is treated as one instructor-assigned experiment."
+  ],
+  "coverage_ranges": [
+    "00:00:00-00:03:15",
+    "00:03:15-00:07:40",
+    "00:07:40-00:10:34",
+    "00:10:34-00:13:44",
+    "00:13:44-00:17:02",
+    "00:17:02-00:18:21.917"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "00:00:00-00:18:21.917",
+      "00:14:41-00:18:21.917",
+      "both slide pages"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-060-T01",
+        "source_timestamp": "00:17:02-00:17:24",
+        "type": "experiment",
+        "purpose": "Use one table, one row, and concurrent sessions to change isolation levels, predict repeated-read visibility, and explain the observed database-specific behavior."
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "copied_slide_images_published": false
+  }
+}
