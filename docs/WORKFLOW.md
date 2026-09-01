@@ -1,6 +1,6 @@
 # Git, Worktree, and publication workflow
 
-This document specifies future local behavior. This bootstrap-generation operation does not modify GitHub.
+This document governs local work and GitHub publication.
 
 ## Branch names
 
@@ -20,14 +20,16 @@ Before writing:
 2. inspect exact local and remote branch existence;
 3. require a clean current Worktree;
 4. stop if another Worktree owns the exact branch;
-5. resume the current Worktree's exact lecture branch even if `main` advanced;
-6. stop on divergence or unrelated local changes.
+5. give each lecture its own isolated Worktree on the exact branch `lecture/<LECTURE-ID>`;
+6. resume that exact lecture Worktree and branch even if `main` advanced;
+7. allow lecture processing to run in parallel, but serialize publication;
+8. stop on divergence or unrelated local changes.
 
-Never automatically stash, reset, rebase, force-push, rewrite, delete, or move Rahul's work.
+Never automatically stash, reset, rebase, force-push, rewrite, delete, overwrite, or move Rahul's work.
 
 ## Starting any lecture
 
-Lectures are independent. A new lecture branch starts from refreshed `origin/main` only when the clean detached/current state is safely ancestral and no exact branch exists. If the exact local or remote branch exists, attach, track, or fast-forward it only after ownership and divergence checks.
+Lectures are independent. A new isolated lecture Worktree and exact branch start from refreshed `origin/main` only when no exact local or remote branch exists. If the exact branch exists, attach, track, or fast-forward it only after ownership and divergence checks.
 
 Raw files under `inputs/private/` stay untracked and may be shared locally across Worktrees through Rahul's chosen file placement. Never copy them into tracked content.
 
@@ -37,13 +39,23 @@ If initialization publication is ever authorized, automatic push may include onl
 
 Rerunning a lecture initialization is additive and idempotent. Preserve notes, attempts, source manifests, code edits, predictions, evidence, and weakness logs.
 
-## Completion choice
+## Authorized lecture publication
 
-When Rahul completes a lecture and omits publication intent, ask only:
+This workflow is explicit authorization to push and merge only the current validated `lecture/<LECTURE-ID>` branch. It does not authorize publishing another branch, changing `main` directly, bypassing checks, or resolving conflicts by guesswork.
 
-```text
-Should I keep the latest lecture changes local, or push them and merge the branch into main?
-```
+Only one completed lecture may be in the publication sequence at a time:
+
+1. confirm the isolated Worktree, exact lecture branch, clean scope, and learner-work preservation;
+2. validate and commit only that lecture's completed work;
+3. fetch `origin` and normally merge the latest `origin/main` into the lecture branch;
+4. stop and report any merge conflict instead of resolving it automatically;
+5. revalidate, push the lecture branch, open a pull request into `main`, and wait for all checks to pass;
+6. immediately before merging, fetch `origin` and compare the branch with the latest `origin/main`;
+7. if `origin/main` moved, normally merge it again, stop on conflict, revalidate, push, and wait for checks again;
+8. merge the pull request with a normal merge commit, never a squash or rebase merge;
+9. fetch `origin` and fast-forward a clean local `main`.
+
+Never rebase, force-push, reset, stash, squash-merge, overwrite learner work, or publish anything under `inputs/private/`.
 
 ## Local bootstrap prompt
 

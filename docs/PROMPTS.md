@@ -9,7 +9,7 @@ Process <LECTURE-ID>.
 Expanded form when desired:
 
 ```text
-Process <LECTURE-ID>. Read every local source for this video. Create complete notes and review material, detect every instructor-assigned task, build its learner setup and separate reference solution, run and record reference evidence when safe and available, and keep all raw course files private.
+Process <LECTURE-ID> in its own isolated Worktree on the exact branch lecture/<LECTURE-ID>. Read every local source for this video. Create complete notes and review material, detect every instructor-assigned task, build its learner setup and separate reference solution, run and record reference evidence when safe and available, and keep all raw course files private. Other lecture Worktrees may process in parallel, but do not publish this lecture concurrently with another.
 ```
 
 ## Find a video
@@ -57,5 +57,5 @@ I completed <LECTURE-ID>. Validate the pack and my task evidence, preserve all a
 ## Publish later
 
 ```text
-I completed <LECTURE-ID>. Validate and finalize it, then push only the current lecture branch's authorized commits and merge after checks pass. Never include unrelated or older local-only work.
+I completed <LECTURE-ID>. In its isolated Worktree and exact lecture/<LECTURE-ID> branch, validate and commit only this lecture. Serialize publication: fetch origin, normally merge the latest origin/main, stop and report any conflict, revalidate, push, open a pull request, and wait for checks. Immediately before merging, fetch and compare origin/main again; if it moved, repeat the normal merge, validation, push, and checks. Then use a normal merge commit and fast-forward a clean local main. This authorizes push and merge only for this validated lecture branch. Never rebase, force-push, reset, stash, squash-merge, overwrite learner work, include unrelated commits, or publish private inputs.
 ```

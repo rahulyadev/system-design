@@ -129,11 +129,14 @@ Rerunning a video performs an additive completeness audit:
 
 ## Git safety
 
-- Inspect the Worktree and exact branch before writing.
+- Inspect every Worktree and the exact local/remote branch state before writing.
+- Each lecture uses one isolated Worktree and the exact branch `lecture/<LECTURE-ID>`. Lecture processing may run in parallel; publication must be serialized.
 - Preserve unrelated changes.
-- Never stash, reset, rebase, force-push, delete a branch, or overwrite files automatically.
+- Never stash, reset, rebase, force-push, squash-merge, delete a branch, overwrite learner work, or publish private inputs.
+- To publish a completed lecture, commit it, fetch `origin`, normally merge the latest `origin/main` into its lecture branch, revalidate, push, open a pull request, and wait for checks. Fetch and compare `origin/main` again immediately before merging; if it moved, repeat the normal merge, validation, push, and checks.
+- Stop and report any merge conflict instead of guessing or resolving it automatically. Merge the pull request with a normal merge commit only after checks pass.
 - Keep raw inputs untracked.
-- Do not push or merge unless Rahul explicitly asks.
+- This workflow is explicit authorization to push and merge only the current validated lecture branch. It does not authorize publishing another branch or changing `main` directly.
 - Follow `docs/WORKFLOW.md` for branch ownership, divergence, and publication.
 
 ## Handoff standard

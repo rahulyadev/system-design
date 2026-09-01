@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "lectures.json"
+PROGRESS = ROOT / "data" / "progress.json"
 
 
 def load_catalog() -> list[dict[str, object]]:
@@ -50,12 +51,25 @@ def course_index(lectures: list[dict[str, object]]) -> str:
     return "\n".join(lines)
 
 
-def progress_records(lectures: list[dict[str, object]]) -> list[dict[str, object]]:
+def load_progress() -> list[dict[str, object]]:
+    if not PROGRESS.is_file():
+        return []
+    value = json.loads(PROGRESS.read_text(encoding="utf-8"))
+    return value if isinstance(value, list) else []
+
+
+def progress_records(
+    lectures: list[dict[str, object]], existing: list[dict[str, object]]
+) -> list[dict[str, object]]:
+    existing_by_id = {str(item.get("id")): item for item in existing if isinstance(item, dict)}
     return [
         {
             "id": item["id"], "title": item["title"], "track": item["track"],
-            "artifact_state": "Absent", "learning_state": "Not started",
-            "instructor_tasks": None, "tasks_attempted": 0, "next_review": None,
+            "artifact_state": existing_by_id.get(str(item["id"]), {}).get("artifact_state", "Absent"),
+            "learning_state": existing_by_id.get(str(item["id"]), {}).get("learning_state", "Not started"),
+            "instructor_tasks": existing_by_id.get(str(item["id"]), {}).get("instructor_tasks"),
+            "tasks_attempted": existing_by_id.get(str(item["id"]), {}).get("tasks_attempted", 0),
+            "next_review": existing_by_id.get(str(item["id"]), {}).get("next_review"),
         }
         for item in lectures
     ]
@@ -85,12 +99,12 @@ def main() -> None:
     parser.add_argument("--check", action="store_true", help="fail if rendered files differ")
     args = parser.parse_args()
     lectures = load_catalog()
-    records = progress_records(lectures)
+    records = progress_records(lectures, load_progress())
     outputs = {
         ROOT / "COURSE_INDEX.md": course_index(lectures),
         ROOT / "courses" / "beginner" / "README.md": track_table("beginner", lectures),
         ROOT / "courses" / "advanced" / "README.md": track_table("advanced", lectures),
-        ROOT / "data" / "progress.json": json.dumps(records, indent=2, ensure_ascii=False) + "\n",
+        PROGRESS: json.dumps(records, indent=2, ensure_ascii=False) + "\n",
         ROOT / "PROGRESS.md": progress_markdown(records),
     }
     differences = []

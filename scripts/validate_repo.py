@@ -677,10 +677,16 @@ def validate_fixture(root: Path) -> dict[str, object]:
     lectures_obj = load_json(root / "data/lectures.json", base, "CATALOG_JSON_INVALID")
     catalog = {str(item.get("id")): item for item in lectures_obj if isinstance(item, dict)} if isinstance(lectures_obj, list) else {}
     validate_lecture_pack(fixture, catalog, base, fixture=True)
+    temporary, live_root = mutation_copy(root)
+    try:
+        copy_fixture_as_live(live_root)
+        base.errors.extend(validate_root(live_root, "live").errors)
+    finally:
+        temporary.cleanup()
     return {
-        "name": "complete_synthetic_lecture_with_instructor_task",
+        "name": "complete_synthetic_ready_lecture_with_instructor_task",
         "status": "passed" if not base.errors else "failed",
-        "detail": "Complete notes, review, task separation, PostgreSQL setup, and honest skipped evidence validated.",
+        "detail": "Complete notes, review, task separation, PostgreSQL setup, honest skipped evidence, and Ready live-profile integration validated.",
         "errors": base.errors,
     }
 
