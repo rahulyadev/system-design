@@ -1,0 +1,104 @@
+name: sd-beg-090-t01
+
+services:
+  mongo:
+    image: mongo:8.0.29-noble
+    profiles: ["mongo", "lab"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sd_beg_090_t01_root
+      MONGO_INITDB_ROOT_PASSWORD: sd_beg_090_t01_mongo_local
+    ports:
+      - "127.0.0.1:55901:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --username $$MONGO_INITDB_ROOT_USERNAME --password $$MONGO_INITDB_ROOT_PASSWORD --authenticationDatabase admin --eval 'quit(db.adminCommand({ping: 1}).ok ? 0 : 2)'",
+        ]
+      interval: 3s
+      timeout: 8s
+      retries: 40
+      start_period: 10s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
+
+  redis:
+    image: redis:8.10.1-alpine3.23
+    profiles: ["redis", "lab"]
+    environment:
+      REDIS_PASSWORD: sd_beg_090_t01_redis_local
+    command:
+      [
+        "redis-server",
+        "--save",
+        "",
+        "--appendonly",
+        "no",
+        "--requirepass",
+        "sd_beg_090_t01_redis_local",
+      ]
+    ports:
+      - "127.0.0.1:55902:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "REDISCLI_AUTH=$$REDIS_PASSWORD redis-cli --no-auth-warning ping | grep -q PONG",
+        ]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
+
+  neo4j:
+    image: neo4j:2026.07.1
+    profiles: ["neo4j", "lab"]
+    stop_grace_period: 60s
+    environment:
+      NEO4J_AUTH: neo4j/sd_beg_090_t01_neo4j_local
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    ports:
+      - "127.0.0.1:55903:7687"
+      - "127.0.0.1:55904:7474"
+    volumes:
+      - neo4j-data:/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "cypher-shell -a bolt://127.0.0.1:7687 -u neo4j -p sd_beg_090_t01_neo4j_local 'RETURN 1;' >/dev/null 2>&1",
+        ]
+      interval: 4s
+      timeout: 8s
+      retries: 45
+      start_period: 20s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
+
+volumes:
+  mongo-data:
+    name: sd-beg-090-t01-mongo-8-0-data
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
+  redis-data:
+    name: sd-beg-090-t01-redis-8-10-data
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
+  neo4j-data:
+    name: sd-beg-090-t01-neo4j-2026-07-data
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-090-T01
+      com.rahulyadav.disposable: "true"
