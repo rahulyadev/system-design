@@ -1,0 +1,59 @@
+{
+  "lecture_id": "SD-BEG-090",
+  "track": "beginner",
+  "title": "Non-Relational Databases",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "coverage_detail": {
+    "transcript_range": "00:00:01-00:14:31",
+    "slide_pages_inspected": 3,
+    "video_duration": "00:14:31.166",
+    "video_inspection": [
+      "complete timeline sampled at 30-second intervals for visual progression",
+      "00:13:10-00:14:31 sampled at 5-second intervals for the spoken exercise and ending",
+      "opening player frame and every slide transition cross-checked against the transcript and supplied slides"
+    ]
+  },
+  "unclear_source_points": [
+    "The automatic transcript renders PostgreSQL and Redis as similar-sounding words; the slides resolve both product names.",
+    "The course intentionally generalizes a very diverse NoSQL category. Sharding, transactions, query power, and partial-update semantics are product- and topology-specific, so the notes preserve the course model and label verified boundaries.",
+    "The statement that graph databases are not optimal for transactions is interpreted as a workload-fit warning, not a claim that graph databases lack ACID transactions; Neo4j documents ACID transaction support.",
+    "The exercise says to play around with three databases but does not prescribe versions, commands, data, outputs, authentication, or cleanup. The task labels its deterministic and safety requirements as Codex additions."
+  ],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "00:00:01-00:14:31 complete transcript",
+      "00:11:24-00:14:31 graph-database section and spoken exercise transition",
+      "00:13:10-00:14:31 final video segment at five-second visual intervals",
+      "final supplied slide exercise"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-090-T01",
+        "title": "Explore MongoDB, Redis, and Neo4j locally",
+        "source_reference": "00:13:40-00:14:22; final supplied slide exercise",
+        "requirements_reconstructed": [
+          "run MongoDB on the local machine and explore it",
+          "run Redis on the local machine and explore it",
+          "run Neo4j, or another chosen graph database, on the local machine and explore it",
+          "inspect the kinds of features and capabilities the three database styles provide"
+        ]
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "slide_images_copied": false
+  }
+}

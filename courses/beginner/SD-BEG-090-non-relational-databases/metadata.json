@@ -1,0 +1,16 @@
+{
+  "lecture_id": "SD-BEG-090",
+  "track": "beginner",
+  "number": 9,
+  "title": "Non-Relational Databases",
+  "slug": "non-relational-databases",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-01T20:06:56+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "access-pattern-first database selection",
+    "partition ownership versus database category"
+  ]
+}

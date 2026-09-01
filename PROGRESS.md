@@ -17,7 +17,7 @@ Artifact generation and learning are separate. A generated pack does not prove u
 | `SD-BEG-060` | Beginner | Database Isolation Levels | Absent | Not started | — | 0 | — |
 | `SD-BEG-070` | Beginner | Scaling Databases | Ready | Not started | 2 | 0 | — |
 | `SD-BEG-080` | Beginner | Sharding and Partitioning | Absent | Not started | — | 0 | — |
-| `SD-BEG-090` | Beginner | Non-Relational Databases | Absent | Not started | — | 0 | — |
+| `SD-BEG-090` | Beginner | Non-Relational Databases | Ready | Not started | 1 | 0 | — |
 | `SD-BEG-100` | Beginner | Picking the Right Database | Absent | Not started | — | 0 | — |
 | `SD-BEG-110` | Beginner | What Is Caching? | Absent | Not started | — | 0 | — |
 | `SD-BEG-120` | Beginner | Populating and Scaling a Cache | Absent | Not started | — | 0 | — |
