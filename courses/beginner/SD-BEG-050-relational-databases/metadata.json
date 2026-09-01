@@ -1,0 +1,15 @@
+{
+  "lecture_id": "SD-BEG-050",
+  "track": "beginner",
+  "number": 5,
+  "title": "Relational Databases",
+  "slug": "relational-databases",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-01T15:11:31+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "table, row, key, and transaction vocabulary"
+  ]
+}

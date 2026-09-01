@@ -1,0 +1,32 @@
+name: sd-beg-050-t01
+
+services:
+  postgres:
+    image: postgres:18.6
+    profiles: ["lab"]
+    environment:
+      POSTGRES_USER: sd_beg_050_t01
+      POSTGRES_PASSWORD: sd_beg_050_t01_local_only
+      POSTGRES_DB: sd_beg_050_t01
+      PGDATA: /var/lib/postgresql/18/docker
+    ports:
+      - "127.0.0.1:55450:5432"
+    volumes:
+      - sd-beg-050-t01-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+    stop_grace_period: 10s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-050-T01
+      com.rahulyadav.disposable: "true"
+
+volumes:
+  sd-beg-050-t01-data:
+    name: sd-beg-050-t01-postgres-18
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-050-T01
+      com.rahulyadav.disposable: "true"

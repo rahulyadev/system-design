@@ -13,7 +13,7 @@ Artifact generation and learning are separate. A generated pack does not prove u
 | `SD-BEG-020` | Beginner | What Is System Design? | Absent | Not started | — | 0 | — |
 | `SD-BEG-030` | Beginner | How to Approach System Design | Absent | Not started | — | 0 | — |
 | `SD-BEG-040` | Beginner | How Do You Evaluate a Good System? | Absent | Not started | — | 0 | — |
-| `SD-BEG-050` | Beginner | Relational Databases | Absent | Not started | — | 0 | — |
+| `SD-BEG-050` | Beginner | Relational Databases | Ready | Not started | 1 | 0 | — |
 | `SD-BEG-060` | Beginner | Database Isolation Levels | Absent | Not started | — | 0 | — |
 | `SD-BEG-070` | Beginner | Scaling Databases | Absent | Not started | — | 0 | — |
 | `SD-BEG-080` | Beginner | Sharding and Partitioning | Absent | Not started | — | 0 | — |
