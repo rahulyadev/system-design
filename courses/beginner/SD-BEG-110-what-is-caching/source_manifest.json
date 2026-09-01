@@ -1,0 +1,68 @@
+{
+  "lecture_id": "SD-BEG-110",
+  "track": "beginner",
+  "title": "What Is Caching?",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcript_files": 1,
+    "transcript_start": "00:00:00.560",
+    "transcript_end": "00:11:20.279",
+    "slide_files": 1,
+    "slide_pages": 2,
+    "video_files": 1,
+    "video_duration": "00:11:19.326"
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [],
+  "unclear_source_points": [
+    "The course describes cache loss as primarily a performance problem, which assumes the database remains the source of truth, has enough fallback capacity, and the application treats cache errors as misses.",
+    "The authentication-token example does not specify revocation, expiry, negative caching, or the fail-open versus fail-closed security policy.",
+    "The exercise does not prescribe a relational database, schema, operation count, client library, concurrency, durability setting, or statistical method for the timing comparison.",
+    "The phrase that a cache is anything nearer is a latency-path intuition; physical distance alone does not determine whether a component is a safe or useful cache.",
+    "The phrase glorified hash table is a useful access-pattern simplification, not a complete description of Redis, Memcached, cache eviction, replication, persistence, or distributed failure behavior."
+  ],
+  "transcript_corrections_resolved_from_visual_sources": [
+    "Redis",
+    "Memcached",
+    "disk I/O",
+    "table joins",
+    "precomputed",
+    "hash tables",
+    "CDN"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "the complete transcript from 00:00:00.560 through 00:11:20.279",
+      "both supplied slide pages, including the exercise ending",
+      "a full-duration video frame survey from 00:00:00 through 00:11:19.326",
+      "the final transcript/video exercise segment from 00:10:23 through 00:11:19"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-110-T01",
+        "source_timestamp": "00:10:23-00:11:12",
+        "type": "experiment",
+        "summary": "Set up Redis locally, practice storing and retrieving data, measure those operations, and compare equivalent operations with a relational database."
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "raw_transcript_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "slide_images_copied": false,
+    "video_frames_copied": false
+  }
+}
