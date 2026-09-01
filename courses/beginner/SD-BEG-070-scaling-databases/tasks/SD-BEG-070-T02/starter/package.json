@@ -1,0 +1,12 @@
+{
+  "name": "sd-beg-070-t02-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mysql2": "3.24.2"
+  }
+}

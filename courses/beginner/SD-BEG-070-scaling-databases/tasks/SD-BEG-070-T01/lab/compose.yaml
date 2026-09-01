@@ -1,0 +1,71 @@
+name: sd-beg-070-t01
+
+services:
+  source:
+    image: mysql:8.4.11
+    profiles: ["lab"]
+    command:
+      - --server-id=701
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --sync-binlog=1
+      - --innodb-flush-log-at-trx-commit=1
+    environment:
+      MYSQL_ROOT_PASSWORD: sd_beg_070_t01_root_local
+      MYSQL_DATABASE: sd_beg_070_t01
+      MYSQL_USER: app
+      MYSQL_PASSWORD: sd_beg_070_t01_app_local
+    ports:
+      - "127.0.0.1:55701:3306"
+    volumes:
+      - sd-beg-070-t01-source-data:/var/lib/mysql
+      - ./source-init/00-replication-user.sql:/docker-entrypoint-initdb.d/00-replication-user.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 2s
+      timeout: 5s
+      retries: 45
+      start_period: 15s
+    stop_grace_period: 20s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-070-T01
+      com.rahulyadav.disposable: "true"
+
+  replica:
+    image: mysql:8.4.11
+    profiles: ["lab"]
+    command:
+      - --server-id=702
+      - --relay-log=relay-bin
+      - --skip-replica-start=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: sd_beg_070_t01_root_local
+      MYSQL_DATABASE: sd_beg_070_t01
+      MYSQL_USER: app
+      MYSQL_PASSWORD: sd_beg_070_t01_app_local
+    ports:
+      - "127.0.0.1:55702:3306"
+    volumes:
+      - sd-beg-070-t01-replica-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 2s
+      timeout: 5s
+      retries: 45
+      start_period: 15s
+    stop_grace_period: 20s
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-070-T01
+      com.rahulyadav.disposable: "true"
+
+volumes:
+  sd-beg-070-t01-source-data:
+    name: sd-beg-070-t01-source-mysql-8-4
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-070-T01
+      com.rahulyadav.disposable: "true"
+  sd-beg-070-t01-replica-data:
+    name: sd-beg-070-t01-replica-mysql-8-4
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-070-T01
+      com.rahulyadav.disposable: "true"
