@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS records;
+
+CREATE TABLE records (
+  key_name VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  value_text VARCHAR(200) NOT NULL,
+  created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  PRIMARY KEY (key_name)
+) ENGINE=InnoDB;
