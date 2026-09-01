@@ -1,0 +1,58 @@
+{
+  "lecture_id": "SD-BEG-100",
+  "track": "beginner",
+  "title": "Picking the Right Database",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcript_files": 1,
+    "transcript_start": "00:00:00.880",
+    "transcript_end": "00:12:22.560",
+    "slide_files": 1,
+    "slide_pages": 3,
+    "video_files": 1,
+    "video_duration": "00:12:21.261"
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [],
+  "unclear_source_points": [
+    "The source says to prefer a relational database when strong consistency is needed, but it does not define the operation, consistency model, transaction boundary, or deployment assumptions.",
+    "The source groups MongoDB with key-value stores in one branch and recommends a document database as a future-proof fallback; the exact intended boundary between key-value and document workloads is not stated.",
+    "The source explains relational scale-out by relaxing relations and constraints, avoiding cross-shard transactions, and sharding manually, but does not specify which guarantees may safely move to the application.",
+    "The automatic transcript repeatedly mistranscribes Redis and Neo4j; the intended product names were resolved against the supplied slides and video."
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "the complete transcript from 00:00:00.880 through 00:12:22.560",
+      "all three supplied slide pages",
+      "the complete video from 00:00:00 through 00:12:21.261",
+      "the final video segment from 00:09:53 through 00:12:21.261"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-100-T01",
+        "source_timestamp": "00:11:56-00:12:11",
+        "type": "design",
+        "summary": "Explore familiar databases and test how one database type can serve a workload usually associated with another type."
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "raw_transcript_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "slide_images_copied": false,
+    "video_frames_copied": false
+  }
+}

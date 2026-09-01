@@ -1,0 +1,15 @@
+{
+  "id": "SD-BEG-100-T01",
+  "lecture_id": "SD-BEG-100",
+  "title": "Explore overlap between database types",
+  "source_timestamp": "00:11:56-00:12:11",
+  "type": "design",
+  "instructor_assigned": true,
+  "runtime_required": false,
+  "tool_profile": "reasoning-only",
+  "tools": [],
+  "learner_status": "not_started",
+  "reference_status": "ready",
+  "execution_status": "not_required",
+  "execution_reason": "The source assigns open-ended exploration but does not require a particular database, implementation, command, or runtime result."
+}

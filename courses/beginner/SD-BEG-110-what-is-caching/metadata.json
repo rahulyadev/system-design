@@ -1,0 +1,17 @@
+{
+  "lecture_id": "SD-BEG-110",
+  "track": "beginner",
+  "number": 11,
+  "title": "What Is Caching?",
+  "slug": "what-is-caching",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-01T21:13:07+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "latency, throughput, and source-of-truth vocabulary",
+    "working sets and temporal locality",
+    "cache correctness versus performance"
+  ]
+}

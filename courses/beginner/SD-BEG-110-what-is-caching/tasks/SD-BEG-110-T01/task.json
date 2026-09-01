@@ -1,0 +1,19 @@
+{
+  "id": "SD-BEG-110-T01",
+  "lecture_id": "SD-BEG-110",
+  "title": "Measure Redis and relational-database operations",
+  "source_timestamp": "00:10:23-00:11:12",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "redis-task-local",
+  "tools": [
+    "docker",
+    "redis",
+    "postgresql",
+    "python"
+  ],
+  "learner_status": "not_started",
+  "reference_status": "verified",
+  "execution_status": "passed"
+}
