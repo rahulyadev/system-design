@@ -1,0 +1,27 @@
+{
+  "id": "SD-BEG-050-T01",
+  "lecture_id": "SD-BEG-050",
+  "title": "Model a social network and crash an open transaction",
+  "source_timestamp": "00:17:05-00:19:20",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "postgres-root with task-local crash isolation",
+  "tools": [
+    "docker",
+    "docker compose",
+    "postgresql",
+    "python-standard-library"
+  ],
+  "runtime_version": "PostgreSQL 18.6",
+  "version_checked_at": "2026-09-01",
+  "version_sources": [
+    "https://www.postgresql.org/docs/release/18.6/",
+    "https://github.com/docker-library/postgres/blob/master/versions.json",
+    "https://github.com/docker-library/docs/blob/master/postgres/README.md"
+  ],
+  "learner_status": "not_started",
+  "reference_status": "verified",
+  "execution_status": "passed",
+  "execution_reason": "Task-local PostgreSQL 18.6 reference path passed schema, constraint, pre-commit crash, committed crash, recovery, and cleanup checks on 2026-09-01; learner status remains not_started"
+}

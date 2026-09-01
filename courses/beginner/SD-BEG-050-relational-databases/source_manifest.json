@@ -1,0 +1,58 @@
+{
+  "lecture_id": "SD-BEG-050",
+  "track": "beginner",
+  "title": "Relational Databases",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcripts": 1,
+    "slide_files": 2,
+    "unique_slide_documents": 1,
+    "slide_pages": 3,
+    "videos": 1,
+    "video_duration": "00:19:34"
+  },
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "unclear_source_points": [],
+  "resolved_source_points": [
+    "The two supplied slide PDFs were byte-identical; the unique three-page document was rendered and inspected in full.",
+    "The transcript has no embedded timestamps, so concept and task ranges were mapped against the complete video.",
+    "The task wording first says to interrupt the process and later explicitly describes interrupting the database; the lab uses a disposable database-server crash and documents client interruption as a smaller variation."
+  ],
+  "coverage_ranges": [
+    "00:00:00-00:04:25",
+    "00:04:25-00:08:20",
+    "00:08:20-00:12:45",
+    "00:12:45-00:17:05",
+    "00:17:05-00:19:34"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "00:00:00-00:19:34",
+      "00:15:39-00:19:34",
+      "all three slide pages"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-050-T01",
+        "source_timestamp": "00:17:05-00:19:20",
+        "type": "experiment",
+        "purpose": "Model a social-network schema, use a multi-statement transaction for a user and profile, interrupt the database before commit, and inspect whether partial state survives."
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "copied_slide_images_published": false
+  }
+}
