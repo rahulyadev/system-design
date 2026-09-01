@@ -1,0 +1,70 @@
+{
+  "lecture_id": "SD-BEG-070",
+  "track": "beginner",
+  "title": "Scaling Databases",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "coverage_detail": {
+    "transcript_range": "00:00:00-00:17:05",
+    "slide_pages_inspected": 3,
+    "video_duration": "00:17:05.970",
+    "video_ranges_checked_in_detail": [
+      "00:00:00-00:00:45",
+      "00:04:15-00:08:07",
+      "00:08:04-00:13:01",
+      "00:13:00-00:17:05"
+    ]
+  },
+  "unclear_source_points": [
+    "The automatic transcript repeats 'synchronous' where the slide and surrounding mechanism clearly distinguish asynchronous replication; the slide resolves the term.",
+    "The course uses historical 'master' terminology. Public artifacts use primary/source and replica while preserving the intended roles.",
+    "The sharding exercise requires two databases but does not name their engine; the lab uses MySQL to keep both exercises on one source-aligned engine.",
+    "The source does not specify an API framework, schema, endpoint contract, authentication, or behavior for keys outside a-z; deterministic local choices are labeled as Codex additions."
+  ],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "00:00:00-00:17:05 complete transcript",
+      "00:07:29-00:08:07 spoken prototype assignment",
+      "00:13:41-00:17:05 final 20% of video and transcript",
+      "final slide exercise section"
+    ],
+    "task_count": 2,
+    "tasks": [
+      {
+        "id": "SD-BEG-070-T01",
+        "title": "Observe MySQL replication and route API reads and writes",
+        "source_reference": "00:07:29-00:08:07; 00:16:08-00:17:05; final slide exercise items 1-4",
+        "requirements_reconstructed": [
+          "configure one MySQL server as a replica of another",
+          "write data and observe replication",
+          "create a small API service with separate primary and replica connections",
+          "route each request to the intended database"
+        ]
+      },
+      {
+        "id": "SD-BEG-070-T02",
+        "title": "Route a-z keys across two range shards",
+        "source_reference": "00:13:24-00:16:06; 00:16:46-00:17:05; final slide exercise items 5-6",
+        "requirements_reconstructed": [
+          "run two databases",
+          "assign a-m keys to one database and n-z keys to the other",
+          "write an API service that routes by key"
+        ]
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "slide_images_copied": false
+  }
+}

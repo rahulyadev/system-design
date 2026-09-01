@@ -1,0 +1,33 @@
+{
+  "id": "SD-BEG-070-T02",
+  "lecture_id": "SD-BEG-070",
+  "title": "Route a-z keys across two range shards",
+  "source_timestamp": "00:13:24-00:16:06; 00:16:46-00:17:05; final slide exercise items 5-6",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "source-required task-local MySQL shards",
+  "tools": [
+    "docker",
+    "docker compose",
+    "mysql",
+    "nodejs",
+    "mysql2",
+    "python-standard-library verifier"
+  ],
+  "runtime_version": "MySQL 8.4.11",
+  "library_versions": {
+    "mysql2": "3.24.2",
+    "node_tested": "24.19.0"
+  },
+  "version_checked_at": "2026-09-01",
+  "version_sources": [
+    "https://raw.githubusercontent.com/docker-library/mysql/master/versions.json",
+    "https://github.com/docker-library/official-images/blob/master/library/mysql",
+    "https://registry.npmjs.org/mysql2/3.24.2"
+  ],
+  "learner_status": "not_started",
+  "reference_status": "verified",
+  "execution_status": "passed",
+  "execution_reason": "The isolated MySQL 8.4.11 reference path passed identity, a-m/n-z API routing, exact physical ownership, wrong-shard absence, invalid-key rejection, 10:1 skew variation, and scoped cleanup checks on 2026-09-01; learner status remains not_started"
+}
