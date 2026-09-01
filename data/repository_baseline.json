@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/rahulyadev/system-design",
+  "inspection_mode": "read-only",
+  "inspected_at": "2026-08-31",
+  "default_branch": "main",
+  "observed_root_strategy": "Existing repository already used a one-video/one-chat course catalog and private local inputs; this replacement strengthens source processing, instructor-task ownership, reproducible labs, evidence, and answer separation.",
+  "observed_tracks": {"beginner": 36, "advanced": 16},
+  "github_mutation_performed": false,
+  "limitations": [
+    "The bootstrap was built outside the target checkout.",
+    "No branch, commit, pull request, issue, tag, release, or remote reference was created or changed."
+  ]
+}

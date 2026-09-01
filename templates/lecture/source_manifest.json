@@ -1,0 +1,22 @@
+{
+  "lecture_id": "<LECTURE-ID>",
+  "track": "<beginner|advanced>",
+  "title": "<exact catalog title>",
+  "source_types_inspected": ["transcript", "slides", "video"],
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "unclear_source_points": [],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": ["<timestamp ranges without transcript text>"],
+    "task_count": 0,
+    "tasks": []
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false
+  }
+}

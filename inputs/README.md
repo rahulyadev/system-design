@@ -1,27 +1,28 @@
-# Private files for each video
+# Private source placement
 
-Everything under `inputs/private/` stays local and is ignored by Git.
+Everything under `inputs/private/` stays local and is ignored by Git and archive validation.
 
-Create one folder per video. The folder name only needs to be clear to you:
+Recommended layout:
 
 ```text
-inputs/private/relational-databases/
+inputs/private/SD-BEG-060/
+├── transcript.srt
+├── slides.pdf
 ├── video.mp4
-├── transcript.srt          # .md, .txt, and .vtt are also fine
-├── slides.pdf              # preferred when the lecture has slides
-├── screenshots/            # use when no PDF exists or a video-only visual matters
-│   └── transaction-timeline.png
-└── my-questions.md         # optional
+├── screenshots/
+└── my-questions.md
 ```
 
-## What to provide
+The folder may use a clear title instead, but a canonical ID avoids collisions between Beginner and Advanced lectures with the same title.
 
-- **Transcript:** the most important input because Codex can search the whole lecture. Timestamps are helpful but not mandatory.
-- **Slides PDF:** best for diagrams, tables, equations, and exact terminology.
-- **Screenshots:** add only if there is no PDF or something important appears only in the video.
-- **Video:** useful for checking unclear transcript passages, animations, and demonstrations.
-- **Your questions:** optional; write anything that confused or surprised you.
+## Source priority
 
-The transcript does not need perfect grammar. Keep uncertain words as `[unclear]` instead of guessing.
+- Transcript: complete coverage and task discovery.
+- Slides PDF: diagrams, formulas, exact labels, final assignments.
+- Video: unclear words, animations, demonstrations, emphasis, and task ending.
+- Screenshots: only for video-only visuals.
+- Questions: what Rahul wants clarified or explored.
 
-Do not place these raw files anywhere outside `inputs/private/`, and do not copy Drive URLs or file IDs into public notes.
+Timestamps are helpful. Imperfect transcripts are acceptable; use `[unclear]` rather than silently guessing.
+
+Do not put raw course files, private URLs/IDs, credentials, or personal material outside `inputs/private/`.

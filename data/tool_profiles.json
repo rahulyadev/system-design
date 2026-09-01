@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "selection_rule": "Use the smallest environment that exposes the mechanism the instructor asks Rahul to observe. Infrastructure is evidence equipment, not decoration.",
+  "profiles": [
+    {
+      "id": "reasoning-only",
+      "use_when": "The task is a design, estimate, comparison, or failure analysis that does not depend on runtime-specific behavior.",
+      "avoid_when": "The answer depends on locks, delivery semantics, persistence, protocol behavior, or measured execution.",
+      "scope": "Markdown design canvas and deterministic calculations",
+      "required_evidence": ["assumptions", "intermediate reasoning", "invariant", "trade-off", "changed constraint"]
+    },
+    {
+      "id": "python-simulation",
+      "use_when": "A small deterministic model makes hashing, rate limiting, queues, retries, elections, or capacity behavior visible.",
+      "avoid_when": "The lesson is specifically about a real product's protocol or persistence guarantee.",
+      "scope": "Task-local standard-library Python",
+      "required_evidence": ["fixed inputs", "assertions", "state trace", "variation"]
+    },
+    {
+      "id": "postgres-root",
+      "use_when": "The task needs real PostgreSQL SQL, transactions, locks, isolation, indexes, plans, or constraints.",
+      "avoid_when": "A calculation or in-memory table is sufficient, or destructive server configuration is the lesson.",
+      "scope": "Root loopback-only postgres:18.6 service; one exact task-owned schema",
+      "required_evidence": ["server version", "database and schema identity", "deterministic seed", "assertion result", "scoped reset"]
+    },
+    {
+      "id": "redis-task-local",
+      "use_when": "Redis-specific expiry, eviction, atomic commands, streams, or pub/sub behavior is central.",
+      "avoid_when": "The task only needs a generic cache model.",
+      "scope": "Task-local pinned Redis-compatible service",
+      "required_evidence": ["resolved version source", "health", "key namespace", "observed state", "scoped cleanup"]
+    },
+    {
+      "id": "rabbitmq-task-local",
+      "use_when": "AMQP routing, publisher confirms, acknowledgements, retries, or dead-lettering is central.",
+      "avoid_when": "A generic producer/consumer simulation answers the question.",
+      "scope": "Task-local pinned RabbitMQ service",
+      "required_evidence": ["topology", "publish outcome", "consumer outcome", "failure case", "scoped cleanup"]
+    },
+    {
+      "id": "kafka-task-local",
+      "use_when": "Partitions, offsets, consumer groups, replay, or log retention must be observed.",
+      "avoid_when": "The task only compares queues and logs conceptually.",
+      "scope": "Task-local pinned Kafka-compatible single-node learning stack",
+      "required_evidence": ["partition map", "offsets", "consumer assignment", "replay result", "resource budget"]
+    },
+    {
+      "id": "minio-task-local",
+      "use_when": "S3-compatible API behavior, multipart upload, presigning, or object metadata must be observed.",
+      "avoid_when": "Local files demonstrate the storage idea completely.",
+      "scope": "Task-local pinned MinIO/S3-compatible service with synthetic credentials",
+      "required_evidence": ["bucket identity", "request/result", "object metadata", "failure case", "scoped cleanup"]
+    },
+    {
+      "id": "proxy-task-local",
+      "use_when": "Load balancing, retries, connection reuse, health checks, or proxy buffering must be observed.",
+      "avoid_when": "A request-flow diagram answers the assignment.",
+      "scope": "Two tiny identifiable servers and one task-local pinned proxy",
+      "required_evidence": ["backend identity sequence", "proxy configuration", "failure behavior", "recovery"]
+    }
+  ],
+  "version_policy": {
+    "root_postgres_pin": "18.6",
+    "root_postgres_verified_at": "2026-08-31",
+    "root_postgres_release_source": "https://www.postgresql.org/docs/release/18.6/",
+    "root_postgres_image_source": "https://github.com/docker-library/postgres/blob/master/versions.json",
+    "root_postgres_layout_source": "https://github.com/docker-library/docs/blob/master/postgres/README.md",
+    "task_local_services": "Resolve a current supported exact version from a primary source when the task pack is generated; record the source and date; never use latest.",
+    "historical_behavior": "Pin the safe historical version or explain and test the modern behavior boundary."
+  }
+}

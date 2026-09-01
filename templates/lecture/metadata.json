@@ -1,0 +1,13 @@
+{
+  "lecture_id": "<LECTURE-ID>",
+  "track": "<beginner|advanced>",
+  "number": 0,
+  "title": "<exact catalog title>",
+  "slug": "<exact catalog slug>",
+  "artifact_state": "Draft",
+  "learning_state": "Not started",
+  "processed_at": "<ISO-8601>",
+  "task_count": 0,
+  "study_order": "independent",
+  "bridges_added": []
+}

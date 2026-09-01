@@ -1,0 +1,14 @@
+{
+  "lecture_id": "SD-BEG-050",
+  "track": "beginner",
+  "number": 5,
+  "title": "Relational Databases",
+  "slug": "relational-databases",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-08-31T00:00:00Z",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [],
+  "validation_fixture": true
+}

@@ -1,7 +1,5 @@
-# Private course inputs and copyrighted source material
+# Private course sources: always local and never committed.
 inputs/private/
-course-materials/
-raw-sources/
 *.mp4
 *.mkv
 *.mov
@@ -12,40 +10,43 @@ raw-sources/
 *.srt
 *.vtt
 
-# Secrets and local configuration
+# Secrets and local configuration.
 .env
 .env.*
 !.env.example
 *.pem
 *.key
+credentials/
+tokens/
+private/
 
-# Python
+# Python and test artifacts.
+.venv/
+venv/
+env/
+ENV/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.venv/
-venv/
+.coverage
+.coverage.*
+coverage.xml
 
-# Node and frontend tools
+# Frontend and local lab artifacts.
 node_modules/
 dist/
 coverage/
-.vite/
 playwright-report/
 test-results/
+tmp/
+.tmp/
+volumes/
+*.log
 
-# Editors and operating systems
+# Editors and operating systems.
 .idea/
 .vscode/
 *.swp
 .DS_Store
-
-# Local lab state
-*.log
-tmp/
-.tmp/
-data/
-volumes/
-

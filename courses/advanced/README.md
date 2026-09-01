@@ -1,33 +1,33 @@
 # System Design Masterclass
 
-Choose any video in any order. The beginner track is a useful foundation, but this table does not enforce a sequence. Advanced videos are longer, so Codex may inspect their sources in chunks before producing one coherent `notes.md`.
+Choose any video in any order. The rows identify source videos and canonical output folders; they are not a prerequisite sequence.
 
 ## Status legend
 
 - `⬜ Not started`
-- `📝 Notes ready`
+- `🧩 Sources ready`
+- `📝 Pack ready`
+- `🧪 Task attempted`
 - `🔁 Reviewing`
 - `✅ Comfortable`
 
-| # | Lecture | Folder | Status | Next review |
+| # | ID | Lecture | Canonical output folder | Status |
 |---:|---|---|---|---|
-| 01 | Foundational Topics in System Design — I | `01-foundational-topics-i` | ⬜ Not started | — |
-| 02 | Foundational Topics in System Design — II | `02-foundational-topics-ii` | ⬜ Not started | — |
-| 03 | Relational Databases | `03-relational-databases` | ⬜ Not started | — |
-| 04 | Non-Relational Databases | `04-non-relational-databases` | ⬜ Not started | — |
-| 05 | Distributed Systems | `05-distributed-systems` | ⬜ Not started | — |
-| 06 | Distributed ID Generators | `06-distributed-id-generators` | ⬜ Not started | — |
-| 07 | Building a Social Network — I | `07-social-network-i` | ⬜ Not started | — |
-| 08 | Building a Social Network — II | `08-social-network-ii` | ⬜ Not started | — |
-| 09 | Storage Engines — I | `09-storage-engines-i` | ⬜ Not started | — |
-| 10 | Storage Engines — II | `10-storage-engines-ii` | ⬜ Not started | — |
-| 11 | High-Throughput Systems — I | `11-high-throughput-systems-i` | ⬜ Not started | — |
-| 12 | High-Throughput Systems — II | `12-high-throughput-systems-ii` | ⬜ Not started | — |
-| 13 | Information Retrieval Systems | `13-information-retrieval-systems` | ⬜ Not started | — |
-| 14 | Ad Hoc System Design | `14-adhoc-system-design` | ⬜ Not started | — |
-| 15 | Algorithmic System Design — I | `15-algorithmic-system-design-i` | ⬜ Not started | — |
-| 16 | Algorithmic System Design — II | `16-algorithmic-system-design-ii` | ⬜ Not started | — |
+| 01 | `SD-ADV-010` | Foundational Topics in System Design — I | `SD-ADV-010-foundational-topics-i` | ⬜ Not started |
+| 02 | `SD-ADV-020` | Foundational Topics in System Design — II | `SD-ADV-020-foundational-topics-ii` | ⬜ Not started |
+| 03 | `SD-ADV-030` | Relational Databases | `SD-ADV-030-relational-databases` | ⬜ Not started |
+| 04 | `SD-ADV-040` | Non-Relational Databases | `SD-ADV-040-non-relational-databases` | ⬜ Not started |
+| 05 | `SD-ADV-050` | Distributed Systems | `SD-ADV-050-distributed-systems` | ⬜ Not started |
+| 06 | `SD-ADV-060` | Distributed ID Generators | `SD-ADV-060-distributed-id-generators` | ⬜ Not started |
+| 07 | `SD-ADV-070` | Building a Social Network — I | `SD-ADV-070-social-network-i` | ⬜ Not started |
+| 08 | `SD-ADV-080` | Building a Social Network — II | `SD-ADV-080-social-network-ii` | ⬜ Not started |
+| 09 | `SD-ADV-090` | Storage Engines — I | `SD-ADV-090-storage-engines-i` | ⬜ Not started |
+| 10 | `SD-ADV-100` | Storage Engines — II | `SD-ADV-100-storage-engines-ii` | ⬜ Not started |
+| 11 | `SD-ADV-110` | High-Throughput Systems — I | `SD-ADV-110-high-throughput-systems-i` | ⬜ Not started |
+| 12 | `SD-ADV-120` | High-Throughput Systems — II | `SD-ADV-120-high-throughput-systems-ii` | ⬜ Not started |
+| 13 | `SD-ADV-130` | Information Retrieval Systems | `SD-ADV-130-information-retrieval-systems` | ⬜ Not started |
+| 14 | `SD-ADV-140` | Ad Hoc System Design | `SD-ADV-140-adhoc-system-design` | ⬜ Not started |
+| 15 | `SD-ADV-150` | Algorithmic System Design — I | `SD-ADV-150-algorithmic-system-design-i` | ⬜ Not started |
+| 16 | `SD-ADV-160` | Algorithmic System Design — II | `SD-ADV-160-algorithmic-system-design-ii` | ⬜ Not started |
 
-## Long-video note
-
-Codex may inspect a long transcript in chunks such as `00:00–30:00`, `30:00–60:00`, and so on. You do not need to manage those chunks. The final result remains one coherent `notes.md` and one compact `review.md`.
+The title-warning rows must be resolved from their supplied transcript/slides; never guess from the filename alone.

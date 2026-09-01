@@ -1,0 +1,15 @@
+{
+  "id": "SD-BEG-050-T01",
+  "lecture_id": "SD-BEG-050",
+  "title": "Relate orders to customers and prove the invariant",
+  "source_timestamp": "fixture:00:10-00:12",
+  "type": "query",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "postgres-root",
+  "tools": ["docker", "postgresql"],
+  "learner_status": "not_started",
+  "reference_status": "ready",
+  "execution_status": "skipped",
+  "execution_reason": "Validation fixture is structurally checked; Docker execution is intentionally not claimed."
+}

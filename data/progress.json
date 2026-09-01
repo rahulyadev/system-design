@@ -1,0 +1,522 @@
+[
+  {
+    "id": "SD-BEG-010",
+    "title": "Course Introduction",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-020",
+    "title": "What Is System Design?",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-030",
+    "title": "How to Approach System Design",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-040",
+    "title": "How Do You Evaluate a Good System?",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-050",
+    "title": "Relational Databases",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-060",
+    "title": "Database Isolation Levels",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-070",
+    "title": "Scaling Databases",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-080",
+    "title": "Sharding and Partitioning",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-090",
+    "title": "Non-Relational Databases",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-100",
+    "title": "Picking the Right Database",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-110",
+    "title": "What Is Caching?",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-120",
+    "title": "Populating and Scaling a Cache",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-130",
+    "title": "Caching at Different Levels",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-140",
+    "title": "Message Brokers and Queues",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-150",
+    "title": "Message Streams and Kafka Essentials",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-160",
+    "title": "Real-Time Pub/Sub",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-170",
+    "title": "Load Balancers",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-180",
+    "title": "Circuit Balancers",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-190",
+    "title": "Data Redundancy and Recovery",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-200",
+    "title": "Leader Election for Auto-Recovery",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-210",
+    "title": "Client–Server Model and Communication Protocols",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-220",
+    "title": "Blob Storage and S3",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-230",
+    "title": "Bloom Filters",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-240",
+    "title": "Consistent Hashing",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-250",
+    "title": "Introduction to Big Data Tools",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-260",
+    "title": "Design E-commerce Product Listing",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-270",
+    "title": "Design an API Rate Limiter",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-280",
+    "title": "Design and Scale Notifications",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-290",
+    "title": "Designing Realtime Abuse Master",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-300",
+    "title": "Design a Tinder Feed",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-310",
+    "title": "Design Twitter Trends",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-320",
+    "title": "Design a URL Shortener",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-330",
+    "title": "Design GitHub Gists and Pastebin",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-340",
+    "title": "Design a Fraud Detection System",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-350",
+    "title": "Design a Recommendation Engine",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-BEG-360",
+    "title": "Design a Web Crawler",
+    "track": "beginner",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-010",
+    "title": "Foundational Topics in System Design — I",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-020",
+    "title": "Foundational Topics in System Design — II",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-030",
+    "title": "Relational Databases",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-040",
+    "title": "Non-Relational Databases",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-050",
+    "title": "Distributed Systems",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-060",
+    "title": "Distributed ID Generators",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-070",
+    "title": "Building a Social Network — I",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-080",
+    "title": "Building a Social Network — II",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-090",
+    "title": "Storage Engines — I",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-100",
+    "title": "Storage Engines — II",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-110",
+    "title": "High-Throughput Systems — I",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-120",
+    "title": "High-Throughput Systems — II",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-130",
+    "title": "Information Retrieval Systems",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-140",
+    "title": "Ad Hoc System Design",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-150",
+    "title": "Algorithmic System Design — I",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  },
+  {
+    "id": "SD-ADV-160",
+    "title": "Algorithmic System Design — II",
+    "track": "advanced",
+    "artifact_state": "Absent",
+    "learning_state": "Not started",
+    "instructor_tasks": null,
+    "tasks_attempted": 0,
+    "next_review": null
+  }
+]

@@ -1,0 +1,19 @@
+name: <unique-task-project-name>
+
+services:
+  <service>:
+    image: <exact-supported-image-tag>
+    profiles: ["lab"]
+    ports:
+      - "127.0.0.1:<host-port>:<container-port>"
+    healthcheck:
+      test: ["CMD", "<exact-health-command>"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+    labels:
+      com.rahulyadav.learning-task: <TASK-ID>
+      com.rahulyadav.disposable: "true"
+
+# Add a named volume only when persistence is part of the experiment.
+# Cleanup must verify its exact name and labels before removal.

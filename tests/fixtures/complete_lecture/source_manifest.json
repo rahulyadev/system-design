@@ -1,0 +1,29 @@
+{
+  "lecture_id": "SD-BEG-050",
+  "track": "beginner",
+  "title": "Relational Databases",
+  "source_types_inspected": ["synthetic-transcript", "synthetic-slides"],
+  "coverage_status": "complete",
+  "coverage_gaps": [],
+  "unclear_source_points": [],
+  "task_scan": {
+    "status": "complete",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": ["fixture:00:00-00:12"],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-050-T01",
+        "source_timestamp": "fixture:00:10-00:12",
+        "faithful_purpose": "Relate orders to customers and explain the enforced invariant."
+      }
+    ]
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false
+  },
+  "validation_fixture": true
+}
