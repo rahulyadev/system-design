@@ -93,9 +93,9 @@
     "id": "SD-BEG-100",
     "title": "Picking the Right Database",
     "track": "beginner",
-    "artifact_state": "Absent",
+    "artifact_state": "Ready",
     "learning_state": "Not started",
-    "instructor_tasks": null,
+    "instructor_tasks": 1,
     "tasks_attempted": 0,
     "next_review": null
   },
