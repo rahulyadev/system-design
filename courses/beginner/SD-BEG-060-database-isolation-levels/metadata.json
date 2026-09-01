@@ -1,0 +1,15 @@
+{
+  "lecture_id": "SD-BEG-060",
+  "track": "beginner",
+  "number": 6,
+  "title": "Database Isolation Levels",
+  "slug": "database-isolation-levels",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-01T16:20:50+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "transaction boundaries, commits, concurrent sessions, snapshots, and row locks"
+  ]
+}

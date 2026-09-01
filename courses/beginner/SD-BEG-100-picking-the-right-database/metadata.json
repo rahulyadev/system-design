@@ -1,0 +1,17 @@
+{
+  "lecture_id": "SD-BEG-100",
+  "track": "beginner",
+  "number": 10,
+  "title": "Picking the Right Database",
+  "slug": "picking-the-right-database",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-01T20:55:31+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "requirements, invariants, and service objectives",
+    "access patterns and query shapes",
+    "scaling, partitioning, and replication as mechanisms rather than SQL/NoSQL identities"
+  ]
+}
