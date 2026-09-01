@@ -73,9 +73,9 @@
     "id": "SD-BEG-080",
     "title": "Sharding and Partitioning",
     "track": "beginner",
-    "artifact_state": "Absent",
+    "artifact_state": "Ready",
     "learning_state": "Not started",
-    "instructor_tasks": null,
+    "instructor_tasks": 0,
     "tasks_attempted": 0,
     "next_review": null
   },

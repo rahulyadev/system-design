@@ -1,0 +1,45 @@
+{
+  "lecture_id": "SD-BEG-080",
+  "track": "beginner",
+  "title": "Sharding and Partitioning",
+  "source_types_inspected": [
+    "slides"
+  ],
+  "source_inventory": {
+    "slide_files": 1,
+    "slide_pages": 5,
+    "transcripts": 0,
+    "videos": 0
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [
+    "transcript",
+    "video"
+  ],
+  "unclear_source_points": [
+    "The source uses WPS without expanding the abbreviation; worked calculations label the assumption that it means writes per second.",
+    "The source explicitly calls its terminology an oversimplification and notes that sharding and partitioning are often used interchangeably; the notes preserve that course model and then define a precise operational vocabulary.",
+    "The final matrix places a same-data read-replica topology in the multi-machine row. The notes distinguish this as replication rather than ownership sharding.",
+    "No transcript or video was supplied, so spoken wording, emphasis, demonstrations, and timestamps could not be cross-checked."
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "all five supplied slide pages",
+      "the final supplied slide page and the final 20% of the supplied source"
+    ],
+    "task_count": 0,
+    "tasks": []
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false,
+    "slide_images_copied": false
+  }
+}
