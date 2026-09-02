@@ -1,0 +1,28 @@
+{
+  "id": "SD-BEG-140-T01",
+  "lecture_id": "SD-BEG-140",
+  "title": "Publish, consume, and recover a RabbitMQ message",
+  "source_timestamp": "00:14:37-00:15:20; final exercise slide",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "rabbitmq-task-local",
+  "tools": [
+    "docker",
+    "docker compose",
+    "RabbitMQ 4.3.5",
+    "Python 3.7+",
+    "Pika 1.4.4"
+  ],
+  "runtime_versions": {
+    "rabbitmq": "4.3.5",
+    "rabbitmq_image": "rabbitmq:4.3.5-management-alpine",
+    "pika": "1.4.4",
+    "checked_on": "2026-09-02"
+  },
+  "learner_status": "not_started",
+  "reference_status": "verified",
+  "execution_status": "passed",
+  "execution_scope": "task-local RabbitMQ and physically separate reference implementation only",
+  "execution_note": "The reference publisher, consumer, publisher confirm, manual acknowledgement, connection-close requeue, redelivered flag, final empty-queue assertion, and scoped cleanup passed. Rahul's learner attempt remains not started."
+}

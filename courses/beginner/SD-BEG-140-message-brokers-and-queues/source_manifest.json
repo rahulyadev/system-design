@@ -1,0 +1,77 @@
+{
+  "lecture_id": "SD-BEG-140",
+  "track": "beginner",
+  "title": "Message Brokers and Queues",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcript_files": 1,
+    "transcript_start": "00:00:00.719",
+    "transcript_end": "00:15:32.680",
+    "slide_files": 1,
+    "slide_pages": 5,
+    "video_files": 1,
+    "video_duration": "00:15:31.743"
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [],
+  "unclear_source_points": [
+    "The course uses 'message queue' and 'message broker' interchangeably for intuition; it does not distinguish the broker process from the queues, exchanges, and bindings the broker manages.",
+    "The generic read-then-delete explanation primarily matches Amazon SQS visibility and deletion semantics. The instructor explicitly notes that RabbitMQ differs but does not spell out RabbitMQ's manual acknowledgement and connection-close redelivery behavior.",
+    "The course says a redelivered message reappears at the head of the queue. Exact placement and ordering after requeue are broker, queue-type, concurrency, and timing dependent, so this is not a portable ordering guarantee.",
+    "The exercise asks the learner to explore features and guarantees without naming a bounded feature set, proof method, message schema, failure experiment, cost limit, or cleanup procedure.",
+    "The optional SQS substitution is conditional on authorized AWS access; the source does not require creating or changing a cloud account when that access is absent."
+  ],
+  "transcript_corrections_resolved_from_visual_sources": [
+    "asynchronous",
+    "RabbitMQ",
+    "Amazon SQS",
+    "Amazon EC2",
+    "Amazon S3",
+    "1080p",
+    "auto-captioning"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "the complete transcript from 00:00:00.719 through 00:15:32.680",
+      "all five supplied slide pages, including the final exercise page",
+      "a full-duration video frame survey from 00:00:00 through 00:15:31.743",
+      "the complete final 20 percent from approximately 00:12:25 through the ending",
+      "the spoken assignment and final exercise visual from 00:14:37 through 00:15:20"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-140-T01",
+        "source_timestamp": "00:14:37-00:15:20",
+        "slide_reference": "final exercise slide",
+        "purpose": "Run RabbitMQ locally, write code that publishes and consumes messages, and study its documented features and guarantees through hands-on exploration."
+      }
+    ]
+  },
+  "external_verification": {
+    "status": "complete",
+    "checked_on": "2026-09-02",
+    "topics": [
+      "RabbitMQ 4.3 queue, acknowledgement, redelivery, publisher-confirm, durability, TTL, dead-lettering, consumer-capacity, and monitoring semantics",
+      "RabbitMQ 4.3.5 support status and Docker Official Image tag availability",
+      "Pika 1.4.4 package version and Python support",
+      "Amazon SQS message retention, visibility timeout, deletion, and at-least-once boundaries"
+    ],
+    "source_authority": "RabbitMQ documentation and release information, Docker Official Images registry, Python Package Index, and Amazon SQS documentation"
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false
+  }
+}
