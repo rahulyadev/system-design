@@ -1,0 +1,26 @@
+name: sd-beg-140-t01-rabbitmq
+
+services:
+  rabbitmq:
+    image: rabbitmq:4.3.5-management-alpine
+    hostname: sd-beg-140-t01-broker
+    profiles: ["lab"]
+    restart: "no"
+    environment:
+      RABBITMQ_DEFAULT_USER: learner
+      RABBITMQ_DEFAULT_PASS: local-only-demo
+      RABBITMQ_DEFAULT_VHOST: sd_beg_140
+    ports:
+      - "127.0.0.1:5678:5672"
+      - "127.0.0.1:15678:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+    labels:
+      com.rahulyadav.learning-task: SD-BEG-140-T01
+      com.rahulyadav.disposable: "true"
+
+# No named volume is used. The exact project container holds only synthetic task
+# state, and `docker compose ... down` removes that state during scoped cleanup.

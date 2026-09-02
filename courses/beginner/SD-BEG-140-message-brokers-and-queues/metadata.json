@@ -1,0 +1,18 @@
+{
+  "lecture_id": "SD-BEG-140",
+  "track": "beginner",
+  "number": 14,
+  "title": "Message Brokers and Queues",
+  "slug": "message-brokers-and-queues",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-02T22:48:31+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "request lifecycle and operation-status polling",
+    "broker versus queue terminology",
+    "acknowledgement, redelivery, and idempotency boundaries",
+    "publisher confirms, durable queues, and persistent messages"
+  ]
+}
