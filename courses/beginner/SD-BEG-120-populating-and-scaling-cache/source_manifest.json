@@ -1,0 +1,69 @@
+{
+  "lecture_id": "SD-BEG-120",
+  "track": "beginner",
+  "title": "Populating and Scaling a Cache",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcript_files": 1,
+    "transcript_start": "00:00:01.040",
+    "transcript_end": "00:10:33.880",
+    "slide_files": 1,
+    "slide_pages": 3,
+    "video_files": 1,
+    "video_duration": "00:10:34.709"
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [],
+  "unclear_source_points": [
+    "The eager database-and-cache update is described as two writes in one request, but the source does not define write order, atomicity, retry behavior, or recovery after only one write succeeds.",
+    "The recommendation and popular-author examples establish proactive warming, but the source does not define the prediction signal, warming worker, admission budget, or stale-data policy.",
+    "The cache-replica explanation does not specify replication lag, read-after-write behavior, failover, or what happens when a replica serves an older value.",
+    "The sharding explanation is technology-neutral and does not prescribe a routing algorithm, rebalancing process, multi-key policy, or hot-key mitigation.",
+    "The advice to always attach an expiry is a useful default for derived cache entries, but the source does not distinguish logical expiry, physical deletion, invalidation, and capacity eviction.",
+    "The statement that caches are faster databases is treated as an access-role analogy, not a guarantee about durability, consistency, latency, or product behavior."
+  ],
+  "transcript_corrections_resolved_from_visual_sources": [
+    "eager population",
+    "writes",
+    "Redis",
+    "MySQL",
+    "commentator",
+    "proactively",
+    "shard"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "the complete transcript from 00:00:01.040 through 00:10:33.880",
+      "all three supplied slide pages, including the scaling ending",
+      "a full-duration video frame survey from 00:00:00 through 00:10:34.709",
+      "the final transcript and video segment from 00:08:33 through 00:10:34, with five-second visual checks from 00:10:00 through the ending"
+    ],
+    "task_count": 0,
+    "tasks": []
+  },
+  "external_verification": {
+    "status": "complete",
+    "topics": [
+      "Redis key expiry behavior",
+      "Redis maxmemory and eviction behavior",
+      "Redis asynchronous replication",
+      "Redis Cluster hash-slot ownership, replicas, and consistency limits"
+    ],
+    "source_authority": "official Redis documentation"
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false
+  }
+}

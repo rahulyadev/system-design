@@ -113,9 +113,9 @@
     "id": "SD-BEG-120",
     "title": "Populating and Scaling a Cache",
     "track": "beginner",
-    "artifact_state": "Absent",
+    "artifact_state": "Ready",
     "learning_state": "Not started",
-    "instructor_tasks": null,
+    "instructor_tasks": 0,
     "tasks_attempted": 0,
     "next_review": null
   },

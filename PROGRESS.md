@@ -20,7 +20,7 @@ Artifact generation and learning are separate. A generated pack does not prove u
 | `SD-BEG-090` | Beginner | Non-Relational Databases | Ready | Not started | 1 | 0 | — |
 | `SD-BEG-100` | Beginner | Picking the Right Database | Ready | Not started | 1 | 0 | — |
 | `SD-BEG-110` | Beginner | What Is Caching? | Ready | Not started | 1 | 0 | — |
-| `SD-BEG-120` | Beginner | Populating and Scaling a Cache | Absent | Not started | — | 0 | — |
+| `SD-BEG-120` | Beginner | Populating and Scaling a Cache | Ready | Not started | 0 | 0 | — |
 | `SD-BEG-130` | Beginner | Caching at Different Levels | Absent | Not started | — | 0 | — |
 | `SD-BEG-140` | Beginner | Message Brokers and Queues | Absent | Not started | — | 0 | — |
 | `SD-BEG-150` | Beginner | Message Streams and Kafka Essentials | Absent | Not started | — | 0 | — |

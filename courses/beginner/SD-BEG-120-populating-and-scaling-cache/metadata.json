@@ -1,0 +1,17 @@
+{
+  "lecture_id": "SD-BEG-120",
+  "track": "beginner",
+  "number": 12,
+  "title": "Populating and Scaling a Cache",
+  "slug": "populating-and-scaling-cache",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-02T19:44:38+05:30",
+  "task_count": 0,
+  "study_order": "independent",
+  "bridges_added": [
+    "cache key, hit, miss, and source-of-truth vocabulary",
+    "expiry, invalidation, and eviction boundaries",
+    "vertical scaling, replication, and sharding distinctions"
+  ]
+}
