@@ -1,0 +1,17 @@
+{
+  "lecture_id": "SD-BEG-130",
+  "track": "beginner",
+  "number": 13,
+  "title": "Caching at Different Levels",
+  "slug": "caching-at-different-levels",
+  "artifact_state": "Ready",
+  "learning_state": "Not started",
+  "processed_at": "2026-09-02T20:13:23+05:30",
+  "task_count": 1,
+  "study_order": "independent",
+  "bridges_added": [
+    "source of truth, derived copy, freshness, expiry, invalidation, and eviction",
+    "private versus shared HTTP cache boundaries",
+    "cache key and hit-ratio vocabulary"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "lecture_id": "SD-BEG-130",
+  "track": "beginner",
+  "title": "Caching at Different Levels",
+  "source_types_inspected": [
+    "transcript",
+    "slides",
+    "video"
+  ],
+  "source_inventory": {
+    "transcript_files": 1,
+    "transcript_start": "00:00:01.199",
+    "transcript_end": "00:19:02.520",
+    "slide_files": 1,
+    "slide_pages": 4,
+    "video_files": 1,
+    "video_duration": "00:19:02.484"
+  },
+  "coverage_status": "complete",
+  "coverage_scope": "all supplied source material",
+  "coverage_gaps": [],
+  "unsupplied_modalities": [],
+  "unclear_source_points": [
+    "The course's nearest-CDN wording is a useful latency model, but it does not distinguish geographical distance from routing, capacity, congestion, or resilience decisions.",
+    "The statement that almost all CDN population is lazy is qualitative; the source provides no measurement for the numerical emphasis.",
+    "The client-side viewing-progress example illustrates device-local staleness, but the source does not establish the named product's actual storage or synchronization design.",
+    "The remote cache is presented as centralized, but the source does not distinguish one logical shared service from its internal replication or sharding topology.",
+    "The advice that every remote-cache key needs an expiry is a safe course default, but the source does not separate expiry from capacity eviction or deliberately persistent entries.",
+    "The provider exercise does not specify a domain or origin prerequisite, cache headers, provider plan, proof headers, cost limit, cleanup, or how to protect account identifiers and secrets."
+  ],
+  "transcript_corrections_resolved_from_visual_sources": [
+    "Redis",
+    "Akamai",
+    "staleness",
+    "invalidation",
+    "precomputed",
+    "total_posts",
+    "origin server",
+    "Content Delivery Network"
+  ],
+  "task_scan": {
+    "status": "complete",
+    "scope": "all supplied source material",
+    "whole_source_scanned": true,
+    "ending_scanned": true,
+    "ranges_checked": [
+      "the complete transcript from 00:00:01.199 through 00:19:02.520",
+      "all four supplied slide pages, including the final exercise page",
+      "a full-duration video frame survey from 00:00:00 through 00:19:02.484",
+      "five-second video checks across the spoken assignment from 00:11:40 through 00:13:05",
+      "five-second video checks across the final 20 percent from 00:15:10 through the ending"
+    ],
+    "task_count": 1,
+    "tasks": [
+      {
+        "id": "SD-BEG-130-T01",
+        "source_timestamp": "00:11:48-00:12:52",
+        "slide_reference": "slide 47",
+        "purpose": "Explore a CDN provider, configure a simple CDN, cache one image, retrieve it through the CDN URL, and study provider implementation examples."
+      }
+    ]
+  },
+  "external_verification": {
+    "status": "complete",
+    "checked_on": "2026-09-02",
+    "topics": [
+      "HTTP private and shared caches, cacheability, freshness, Age, Vary, and revalidation",
+      "Cloudflare onboarding, proxy routing, default cache eligibility, response-status evidence, TTL, and URL-specific purge",
+      "Akamai edge population, cache rules, TTL, eviction, and purge boundaries",
+      "PostgreSQL transaction atomicity for maintaining a derived counter with its base write"
+    ],
+    "source_authority": "RFC Editor, Cloudflare documentation, Akamai TechDocs, and PostgreSQL documentation"
+  },
+  "privacy_review": {
+    "raw_source_copied": false,
+    "private_paths_recorded": false,
+    "private_links_or_ids_recorded": false
+  }
+}

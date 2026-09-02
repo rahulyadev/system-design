@@ -1,0 +1,23 @@
+{
+  "id": "SD-BEG-130-T01",
+  "lecture_id": "SD-BEG-130",
+  "title": "Configure a CDN and serve one image",
+  "source_timestamp": "00:11:48-00:12:52; slide 47",
+  "type": "experiment",
+  "instructor_assigned": true,
+  "runtime_required": true,
+  "tool_profile": "python-simulation",
+  "tools": [
+    "web browser",
+    "Cloudflare or Akamai account",
+    "disposable origin and domain",
+    "HTTP header inspection",
+    "python"
+  ],
+  "learner_status": "not_started",
+  "reference_status": "ready",
+  "execution_status": "passed",
+  "execution_scope": "Codex-added deterministic local companion only",
+  "assigned_provider_run_status": "not_started",
+  "execution_note": "The local cache-mechanism model passed. It does not create or verify the instructor-assigned provider account, DNS, origin, edge configuration, or CDN URL; those remain Rahul's work."
+}
